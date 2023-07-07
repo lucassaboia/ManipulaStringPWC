@@ -1,56 +1,151 @@
+using System.Reflection.Metadata.Ecma335;
+using System;
+using System.Runtime.InteropServices;
+
+
 namespace ManipulaStringPWC
 {
     public partial class Form1 : Form
     {
-        private ManipulaString ManipulaString;
+        private bool isMouseDown = false;
+        private Point mouseOffset;
+        private ManipulaString ManipulaString = new ManipulaString();
+        private Button currentButton;
+        private Form activeForm;
 
         public Form1()
         {
             InitializeComponent();
-            ManipulaString = new ManipulaString();
-        }
-        private void btnOrdem_Click(object sender, EventArgs e)
-        {
-            string input = txtOrdem.Text;
-            string output = ManipulaString.InvertePalavras(input);
-            lblOrdem.Text = output;
-            lblOrdem.Visible = true;
+            currentButton = new Button();
+            activeForm = new Form();
         }
 
-        private void btnDuplicacao_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            string input = txtDuplicado.Text;
-            string output = ManipulaString.RemoverDuplicacoes(input);
+            OpenChildForm(new Formulários.frmHome(), btnnavHome);
+        }
+        private void ClicarBotao(Button button)
+        {
+            if (button != null && currentButton != button)
+            {
+                SairBotao();
+                Color color = Color.FromArgb(29, 29, 29);
+                currentButton = button;
+                currentButton.BackColor = color;
+                currentButton.ForeColor = Color.White;
+                currentButton.Font = new System.Drawing.Font("Segoe UI Semibold", 13.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+        }
+        private void SairBotao()
+        {
+            foreach (Control previousBtn in panelNavbar.Controls)
+            {
+                if (previousBtn is Button)
+                {
+                    previousBtn.BackColor = Color.FromArgb(249, 249, 249);
+                    previousBtn.ForeColor = Color.FromArgb(156, 156, 156);
+                    previousBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                }
+            }
+        }
+        private void OpenChildForm(Form childForm, Button button)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
 
-            lblDuplicacao.Text = output;
-            lblDuplicacao.Visible = true;
+            if (button != null)
+            {
+                ClicarBotao(button);
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            panelDesktopPane.Controls.Add(childForm);
+            panelDesktopPane.Tag = childForm;
+            childForm.Dock = DockStyle.Fill;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
-        private void btnPalindromaLonga_Click(object sender, EventArgs e)
+        private void btnnavHome_Click(object sender, EventArgs e)
         {
-            string input = txtPalindromaLonga.Text;
-            string output = ManipulaString.PalindromaLonga(input);
-
-            lblPalindromaLonga.Text = output;
-            lblPalindromaLonga.Visible = true;
+            if (sender is Button button)
+            {
+                OpenChildForm(new Formulários.frmHome(), button);
+            }
+        }
+        private void btnnavOrdem_Click(object sender, EventArgs e)
+        {
+            if (sender is Button button)
+            {
+                OpenChildForm(new Formulários.frmOrdem(), button);
+            }
+        }
+        private void btnnavDuplicacao_Click(object sender, EventArgs e)
+        {
+            if (sender is Button button)
+            {
+                OpenChildForm(new Formulários.frmDuplicacao(), button);
+            }
         }
 
-        private void btnMaiusculo_Click(object sender, EventArgs e)
+        private void btnnavPalindroma_Click(object sender, EventArgs e)
         {
-            string input = txtMaiuscula.Text;
-            string output = ManipulaString.PrimeiraLetraMaiuscula(input);
-
-            lblMaiusculo.Text = output;
-            lblMaiusculo.Visible = true;
+            if (sender is Button button)
+            {
+                OpenChildForm(new Formulários.frmPalindroma(), button);
+            }
         }
 
-        private void btnPalindromo_Click(object sender, EventArgs e)
+        private void btnnavMaiuscula_Click(object sender, EventArgs e)
         {
-            string input = txtPalindromo.Text;
-            bool isAnagramOfPalindrome = ManipulaString.IsAnagramOfPalindrome(input);
+            if (sender is Button button)
+            {
+                OpenChildForm(new Formulários.frmMaiuscula(), button);
+            }
+        }
 
-            lblPalindromo.Text = isAnagramOfPalindrome.ToString();
-            lblPalindromo.Visible = true;
+        private void btnnavAnagrama_Click(object sender, EventArgs e)
+        {
+            if (sender is Button button)
+            {
+                OpenChildForm(new Formulários.frmAnagrama(), button);
+            }
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isMouseDown = true;
+            mouseOffset = new Point(e.X, e.Y);
+        }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isMouseDown)
+            {
+                Point mousePos = Control.MousePosition;
+                mousePos.Offset(-mouseOffset.X, -mouseOffset.Y);
+                Location = mousePos;
+            }
+        }
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isMouseDown = false;
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?",
+                      "PWC - Processo Seletivo",
+                       MessageBoxButtons.YesNo,
+                       MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

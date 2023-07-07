@@ -28,271 +28,232 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtOrdem = new TextBox();
-            label1 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label3 = new Label();
-            label2 = new Label();
-            txtDuplicado = new TextBox();
-            label4 = new Label();
-            txtPalindromaLonga = new TextBox();
-            label5 = new Label();
-            txtMaiuscula = new TextBox();
-            label6 = new Label();
-            txtPalindromo = new TextBox();
-            btnOrdem = new Button();
-            btnDuplicacao = new Button();
-            btnPalindromaLonga = new Button();
-            btnMaiusculo = new Button();
-            btnPalindromo = new Button();
-            lblOrdem = new Label();
-            lblDuplicacao = new Label();
-            lblPalindromaLonga = new Label();
-            lblMaiusculo = new Label();
-            lblPalindromo = new Label();
+            panel1 = new Panel();
+            button8 = new Button();
+            button7 = new Button();
+            panelNavbar = new Panel();
+            btnnavHome = new Button();
+            btnnavAnagrama = new Button();
+            btnnavMaiuscula = new Button();
+            btnnavPalindroma = new Button();
+            btnnavDuplicacao = new Button();
+            btnnavOrdem = new Button();
+            panelDesktopPane = new Panel();
+            panel1.SuspendLayout();
+            panelNavbar.SuspendLayout();
             SuspendLayout();
-            // 
-            // txtOrdem
-            // 
-            txtOrdem.Location = new Point(65, 118);
-            txtOrdem.Name = "txtOrdem";
-            txtOrdem.Size = new Size(100, 23);
-            txtOrdem.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(65, 83);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Ordem das Palavras";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(257, 83);
+            label3.Location = new Point(450, 292);
             label3.Name = "label3";
             label3.Size = new Size(0, 15);
             label3.TabIndex = 3;
             // 
-            // label2
+            // panel1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(261, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(112, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Remove Duplicação";
+            panel1.BackColor = Color.FromArgb(29, 29, 29);
+            panel1.BackgroundImage = Properties.Resources.Header;
+            panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.Controls.Add(button8);
+            panel1.Controls.Add(button7);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1224, 82);
+            panel1.TabIndex = 22;
+            panel1.MouseDown += panel1_MouseDown;
+            panel1.MouseMove += panel1_MouseMove;
+            panel1.MouseUp += panel1_MouseUp;
             // 
-            // txtDuplicado
+            // button8
             // 
-            txtDuplicado.Location = new Point(261, 118);
-            txtDuplicado.Name = "txtDuplicado";
-            txtDuplicado.Size = new Size(100, 23);
-            txtDuplicado.TabIndex = 4;
+            button8.BackColor = Color.Transparent;
+            button8.BackgroundImage = Properties.Resources.ei_close;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button8.ForeColor = Color.Black;
+            button8.Location = new Point(1200, 0);
+            button8.Name = "button8";
+            button8.Size = new Size(24, 24);
+            button8.TabIndex = 10;
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
-            // label4
+            // button7
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(455, 83);
-            label4.Name = "label4";
-            label4.Size = new Size(104, 15);
-            label4.TabIndex = 7;
-            label4.Text = "Palíndroma Longa";
+            button7.BackColor = Color.Transparent;
+            button7.BackgroundImage = Properties.Resources.material_symbols_minimize;
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.ForeColor = Color.FromArgb(156, 156, 156);
+            button7.Location = new Point(1170, 0);
+            button7.Name = "button7";
+            button7.Size = new Size(24, 24);
+            button7.TabIndex = 9;
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
-            // txtPalindromaLonga
+            // panelNavbar
             // 
-            txtPalindromaLonga.Location = new Point(455, 118);
-            txtPalindromaLonga.Name = "txtPalindromaLonga";
-            txtPalindromaLonga.Size = new Size(100, 23);
-            txtPalindromaLonga.TabIndex = 6;
+            panelNavbar.BackColor = Color.FromArgb(249, 249, 249);
+            panelNavbar.Controls.Add(btnnavHome);
+            panelNavbar.Controls.Add(btnnavAnagrama);
+            panelNavbar.Controls.Add(btnnavMaiuscula);
+            panelNavbar.Controls.Add(btnnavPalindroma);
+            panelNavbar.Controls.Add(btnnavDuplicacao);
+            panelNavbar.Controls.Add(btnnavOrdem);
+            panelNavbar.Dock = DockStyle.Top;
+            panelNavbar.ForeColor = SystemColors.Control;
+            panelNavbar.Location = new Point(0, 82);
+            panelNavbar.Name = "panelNavbar";
+            panelNavbar.Size = new Size(1224, 59);
+            panelNavbar.TabIndex = 23;
             // 
-            // label5
+            // btnnavHome
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(618, 83);
-            label5.Name = "label5";
-            label5.Size = new Size(134, 15);
-            label5.TabIndex = 9;
-            label5.Text = "Primeira letra Maiúscula";
+            btnnavHome.BackColor = Color.FromArgb(29, 29, 29);
+            btnnavHome.Dock = DockStyle.Left;
+            btnnavHome.FlatAppearance.BorderSize = 0;
+            btnnavHome.FlatStyle = FlatStyle.Flat;
+            btnnavHome.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnnavHome.ForeColor = Color.White;
+            btnnavHome.Location = new Point(0, 0);
+            btnnavHome.Name = "btnnavHome";
+            btnnavHome.Size = new Size(172, 59);
+            btnnavHome.TabIndex = 8;
+            btnnavHome.Text = "Home";
+            btnnavHome.UseVisualStyleBackColor = false;
+            btnnavHome.Click += btnnavHome_Click;
             // 
-            // txtMaiuscula
+            // btnnavAnagrama
             // 
-            txtMaiuscula.Location = new Point(630, 118);
-            txtMaiuscula.Name = "txtMaiuscula";
-            txtMaiuscula.Size = new Size(100, 23);
-            txtMaiuscula.TabIndex = 8;
+            btnnavAnagrama.BackColor = Color.Transparent;
+            btnnavAnagrama.Dock = DockStyle.Right;
+            btnnavAnagrama.FlatAppearance.BorderSize = 0;
+            btnnavAnagrama.FlatStyle = FlatStyle.Flat;
+            btnnavAnagrama.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnnavAnagrama.ForeColor = Color.FromArgb(156, 156, 156);
+            btnnavAnagrama.Location = new Point(364, 0);
+            btnnavAnagrama.Name = "btnnavAnagrama";
+            btnnavAnagrama.Size = new Size(172, 59);
+            btnnavAnagrama.TabIndex = 7;
+            btnnavAnagrama.Text = "Anagrama";
+            btnnavAnagrama.UseVisualStyleBackColor = true;
+            btnnavAnagrama.Click += btnnavAnagrama_Click;
             // 
-            // label6
+            // btnnavMaiuscula
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(809, 83);
-            label6.Name = "label6";
-            label6.Size = new Size(133, 15);
-            label6.TabIndex = 11;
-            label6.Text = "Verifica se é Palíndromo";
+            btnnavMaiuscula.BackColor = Color.Transparent;
+            btnnavMaiuscula.Dock = DockStyle.Right;
+            btnnavMaiuscula.FlatAppearance.BorderSize = 0;
+            btnnavMaiuscula.FlatStyle = FlatStyle.Flat;
+            btnnavMaiuscula.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnnavMaiuscula.ForeColor = Color.FromArgb(156, 156, 156);
+            btnnavMaiuscula.Location = new Point(536, 0);
+            btnnavMaiuscula.Name = "btnnavMaiuscula";
+            btnnavMaiuscula.Size = new Size(172, 59);
+            btnnavMaiuscula.TabIndex = 6;
+            btnnavMaiuscula.Text = "Maiúscula";
+            btnnavMaiuscula.UseVisualStyleBackColor = true;
+            btnnavMaiuscula.Click += btnnavMaiuscula_Click;
             // 
-            // txtPalindromo
+            // btnnavPalindroma
             // 
-            txtPalindromo.Location = new Point(832, 118);
-            txtPalindromo.Name = "txtPalindromo";
-            txtPalindromo.Size = new Size(100, 23);
-            txtPalindromo.TabIndex = 10;
+            btnnavPalindroma.BackColor = Color.Transparent;
+            btnnavPalindroma.Dock = DockStyle.Right;
+            btnnavPalindroma.FlatAppearance.BorderSize = 0;
+            btnnavPalindroma.FlatStyle = FlatStyle.Flat;
+            btnnavPalindroma.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnnavPalindroma.ForeColor = Color.FromArgb(156, 156, 156);
+            btnnavPalindroma.Location = new Point(708, 0);
+            btnnavPalindroma.Name = "btnnavPalindroma";
+            btnnavPalindroma.Size = new Size(172, 59);
+            btnnavPalindroma.TabIndex = 5;
+            btnnavPalindroma.Text = "Palíndroma";
+            btnnavPalindroma.UseVisualStyleBackColor = true;
+            btnnavPalindroma.Click += btnnavPalindroma_Click;
             // 
-            // btnOrdem
+            // btnnavDuplicacao
             // 
-            btnOrdem.Location = new Point(63, 166);
-            btnOrdem.Name = "btnOrdem";
-            btnOrdem.Size = new Size(104, 52);
-            btnOrdem.TabIndex = 12;
-            btnOrdem.Text = "button1";
-            btnOrdem.UseVisualStyleBackColor = true;
-            btnOrdem.Click += btnOrdem_Click;
+            btnnavDuplicacao.BackColor = Color.Transparent;
+            btnnavDuplicacao.Dock = DockStyle.Right;
+            btnnavDuplicacao.FlatAppearance.BorderSize = 0;
+            btnnavDuplicacao.FlatStyle = FlatStyle.Flat;
+            btnnavDuplicacao.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnnavDuplicacao.ForeColor = Color.FromArgb(156, 156, 156);
+            btnnavDuplicacao.Location = new Point(880, 0);
+            btnnavDuplicacao.Name = "btnnavDuplicacao";
+            btnnavDuplicacao.Size = new Size(172, 59);
+            btnnavDuplicacao.TabIndex = 4;
+            btnnavDuplicacao.Text = "Duplicação";
+            btnnavDuplicacao.UseVisualStyleBackColor = true;
+            btnnavDuplicacao.Click += btnnavDuplicacao_Click;
             // 
-            // btnDuplicacao
+            // btnnavOrdem
             // 
-            btnDuplicacao.Location = new Point(257, 166);
-            btnDuplicacao.Name = "btnDuplicacao";
-            btnDuplicacao.Size = new Size(104, 52);
-            btnDuplicacao.TabIndex = 13;
-            btnDuplicacao.Text = "button2";
-            btnDuplicacao.UseVisualStyleBackColor = true;
-            btnDuplicacao.Click += btnDuplicacao_Click;
+            btnnavOrdem.BackColor = Color.Transparent;
+            btnnavOrdem.Dock = DockStyle.Right;
+            btnnavOrdem.FlatAppearance.BorderSize = 0;
+            btnnavOrdem.FlatStyle = FlatStyle.Flat;
+            btnnavOrdem.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnnavOrdem.ForeColor = Color.FromArgb(156, 156, 156);
+            btnnavOrdem.Location = new Point(1052, 0);
+            btnnavOrdem.Name = "btnnavOrdem";
+            btnnavOrdem.Size = new Size(172, 59);
+            btnnavOrdem.TabIndex = 1;
+            btnnavOrdem.Text = "Ordem";
+            btnnavOrdem.UseVisualStyleBackColor = true;
+            btnnavOrdem.Click += btnnavOrdem_Click;
             // 
-            // btnPalindromaLonga
+            // panelDesktopPane
             // 
-            btnPalindromaLonga.Location = new Point(451, 166);
-            btnPalindromaLonga.Name = "btnPalindromaLonga";
-            btnPalindromaLonga.Size = new Size(104, 52);
-            btnPalindromaLonga.TabIndex = 14;
-            btnPalindromaLonga.Text = "button3";
-            btnPalindromaLonga.UseVisualStyleBackColor = true;
-            btnPalindromaLonga.Click += btnPalindromaLonga_Click;
-            // 
-            // btnMaiusculo
-            // 
-            btnMaiusculo.Location = new Point(626, 166);
-            btnMaiusculo.Name = "btnMaiusculo";
-            btnMaiusculo.Size = new Size(104, 52);
-            btnMaiusculo.TabIndex = 15;
-            btnMaiusculo.Text = "button4";
-            btnMaiusculo.UseVisualStyleBackColor = true;
-            btnMaiusculo.Click += btnMaiusculo_Click;
-            // 
-            // btnPalindromo
-            // 
-            btnPalindromo.Location = new Point(832, 166);
-            btnPalindromo.Name = "btnPalindromo";
-            btnPalindromo.Size = new Size(104, 52);
-            btnPalindromo.TabIndex = 16;
-            btnPalindromo.Text = "button5";
-            btnPalindromo.UseVisualStyleBackColor = true;
-            btnPalindromo.Click += btnPalindromo_Click;
-            // 
-            // lblOrdem
-            // 
-            lblOrdem.AutoSize = true;
-            lblOrdem.Location = new Point(54, 255);
-            lblOrdem.Name = "lblOrdem";
-            lblOrdem.Size = new Size(111, 15);
-            lblOrdem.TabIndex = 17;
-            lblOrdem.Text = "Ordem das Palavras";
-            lblOrdem.Visible = false;
-            // 
-            // lblDuplicacao
-            // 
-            lblDuplicacao.AutoSize = true;
-            lblDuplicacao.Location = new Point(250, 255);
-            lblDuplicacao.Name = "lblDuplicacao";
-            lblDuplicacao.Size = new Size(111, 15);
-            lblDuplicacao.TabIndex = 18;
-            lblDuplicacao.Text = "Ordem das Palavras";
-            lblDuplicacao.Visible = false;
-            // 
-            // lblPalindromaLonga
-            // 
-            lblPalindromaLonga.AutoSize = true;
-            lblPalindromaLonga.Location = new Point(451, 255);
-            lblPalindromaLonga.Name = "lblPalindromaLonga";
-            lblPalindromaLonga.Size = new Size(111, 15);
-            lblPalindromaLonga.TabIndex = 19;
-            lblPalindromaLonga.Text = "Ordem das Palavras";
-            lblPalindromaLonga.Visible = false;
-            // 
-            // lblMaiusculo
-            // 
-            lblMaiusculo.AutoSize = true;
-            lblMaiusculo.Location = new Point(619, 255);
-            lblMaiusculo.Name = "lblMaiusculo";
-            lblMaiusculo.Size = new Size(111, 15);
-            lblMaiusculo.TabIndex = 20;
-            lblMaiusculo.Text = "Ordem das Palavras";
-            lblMaiusculo.Visible = false;
-            // 
-            // lblPalindromo
-            // 
-            lblPalindromo.AutoSize = true;
-            lblPalindromo.Location = new Point(831, 255);
-            lblPalindromo.Name = "lblPalindromo";
-            lblPalindromo.Size = new Size(111, 15);
-            lblPalindromo.TabIndex = 21;
-            lblPalindromo.Text = "Ordem das Palavras";
-            lblPalindromo.Visible = false;
+            panelDesktopPane.Dock = DockStyle.Fill;
+            panelDesktopPane.Location = new Point(0, 141);
+            panelDesktopPane.Name = "panelDesktopPane";
+            panelDesktopPane.Size = new Size(1224, 369);
+            panelDesktopPane.TabIndex = 24;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 461);
-            Controls.Add(lblPalindromo);
-            Controls.Add(lblMaiusculo);
-            Controls.Add(lblPalindromaLonga);
-            Controls.Add(lblDuplicacao);
-            Controls.Add(lblOrdem);
-            Controls.Add(btnPalindromo);
-            Controls.Add(btnMaiusculo);
-            Controls.Add(btnPalindromaLonga);
-            Controls.Add(btnDuplicacao);
-            Controls.Add(btnOrdem);
-            Controls.Add(label6);
-            Controls.Add(txtPalindromo);
-            Controls.Add(label5);
-            Controls.Add(txtMaiuscula);
-            Controls.Add(label4);
-            Controls.Add(txtPalindromaLonga);
-            Controls.Add(label2);
-            Controls.Add(txtDuplicado);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1224, 510);
+            Controls.Add(panelDesktopPane);
+            Controls.Add(panelNavbar);
+            Controls.Add(panel1);
             Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(txtOrdem);
+            FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            panelNavbar.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox txtOrdem;
-        private Label label1;
         private Label label3;
-        private Label label2;
-        private TextBox txtDuplicado;
-        private Label label4;
-        private TextBox txtPalindromaLonga;
-        private Label label5;
-        private TextBox txtMaiuscula;
-        private Label label6;
-        private TextBox txtPalindromo;
-        private Button btnOrdem;
-        private Button btnDuplicacao;
-        private Button btnPalindromaLonga;
-        private Button btnMaiusculo;
-        private Button btnPalindromo;
-        private Label lblOrdem;
-        private Label lblDuplicacao;
-        private Label lblPalindromaLonga;
-        private Label lblMaiusculo;
-        private Label lblPalindromo;
+        private Panel panel1;
+        private Panel panelNavbar;
+        private Button btnnavAnagrama;
+        private Button btnnavMaiuscula;
+        private Button btnnavPalindroma;
+        private Button btnnavDuplicacao;
+        private Button btnnavOrdem;
+        private Button btnnavHome;
+        private Button button8;
+        private Button button7;
+        private Panel panelDesktopPane;
     }
 }
