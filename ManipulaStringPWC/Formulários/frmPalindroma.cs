@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Web;
-
+﻿using System.Diagnostics;
+using CustomAlertBoxDemo;
 namespace ManipulaStringPWC.Formulários
 {
     public partial class frmPalindroma : Form
@@ -20,7 +9,11 @@ namespace ManipulaStringPWC.Formulários
         {
             InitializeComponent();
         }
-
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             string urlDestino = "https://pt.wikipedia.org/wiki/Pal%C3%ADndromo";
@@ -31,20 +24,36 @@ namespace ManipulaStringPWC.Formulários
             };
             Process.Start(psi);
         }
-
         private void btnPalindromaLonga_Click(object sender, EventArgs e)
         {
-            string input = txtPalindromaLonga.Texts;
-            string output = ManipulaString.PalindromaLonga(input);
+            if (string.IsNullOrEmpty(txtPalindromaLonga.Texts.Trim()))
 
-            lblPalindromaLonga.Text = output;
-            lblPalindromaLonga.Visible = true;
+            {
+                this.Alert("Preencha todos os campos", Form_Alert.enmType.Info);
+            }
+            else
+            {      
+                string input = txtPalindromaLonga.Texts;
+                string output = ManipulaString.PalindromaLonga(input);
+                lblPalindromaLonga.Text = output;
+                lblPalindromaLonga.Visible = true;
+                this.Alert("Maior palíndroma identificada!", Form_Alert.enmType.Success);
+            }
         }
 
         private void btnLixeira_Click(object sender, EventArgs e)
         {
-            txtPalindromaLonga.Texts = "";
-            lblPalindromaLonga.Text = "";
+            if (string.IsNullOrEmpty(txtPalindromaLonga.Texts.Trim()))
+
+            {
+                this.Alert("Não há nada para ser limpo", Form_Alert.enmType.Warning);
+            }
+            else
+            {              
+                txtPalindromaLonga.Texts = "";
+                lblPalindromaLonga.Text = "";
+                this.Alert("Texto limpo com sucesso", Form_Alert.enmType.Success);
+            }
         }
     }
 }

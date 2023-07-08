@@ -234,7 +234,7 @@
             MaximizeBox = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Manipulação de String";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panelNavbar.ResumeLayout(false);

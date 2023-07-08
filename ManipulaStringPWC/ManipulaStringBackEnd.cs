@@ -24,7 +24,6 @@ namespace ManipulaStringPWC
         public string RemoverDuplicacoes(string input)
         {
             string result = "";
-
             foreach (char c in input)
             {
                 if (result.IndexOf(c) == -1)

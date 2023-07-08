@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomAlertBoxDemo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,19 +19,40 @@ namespace ManipulaStringPWC.Formulários
             InitializeComponent();
         }
 
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
+
         private void btnDuplicacao_Click(object sender, EventArgs e)
         {
-            string input = txtDuplicado.Texts;
-            string output = ManipulaString.RemoverDuplicacoes(input);
-
-            lblDuplicacao.Text = output;
-            lblDuplicacao.Visible = true;
+            if (string.IsNullOrEmpty(txtDuplicado.Texts.Trim()))
+            {
+                this.Alert("Preencha todos os campos", Form_Alert.enmType.Info);
+            }
+            else
+            {
+                string input = txtDuplicado.Texts;
+                string output = ManipulaString.RemoverDuplicacoes(input);
+                lblDuplicacao.Text = output;
+                lblDuplicacao.Visible = true;
+                this.Alert("Retirado todas as duplicações!", Form_Alert.enmType.Success);
+            }
         }
 
         private void btnLixeira_Click(object sender, EventArgs e)
         {
-            txtDuplicado.Texts = "";
-            lblDuplicacao.Text = "";
+            if (string.IsNullOrEmpty(txtDuplicado.Texts.Trim()))
+            {
+                this.Alert("Não há nada para ser limpo", Form_Alert.enmType.Warning);
+            }
+            else
+            {                
+                txtDuplicado.Texts = "";
+                lblDuplicacao.Text = "";
+                this.Alert("Texto limpo com sucesso", Form_Alert.enmType.Success);
+            }
         }
     }
 }

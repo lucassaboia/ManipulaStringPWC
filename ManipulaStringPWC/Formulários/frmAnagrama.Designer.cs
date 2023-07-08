@@ -129,7 +129,7 @@
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(170, 48);
             lblTitulo.TabIndex = 24;
-            lblTitulo.Text = "Esta é a sua frase:";
+            lblTitulo.Text = "É um palíndromo?";
             // 
             // lblPalindromo
             // 
