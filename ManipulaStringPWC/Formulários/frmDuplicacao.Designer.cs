@@ -55,7 +55,7 @@
             btnLixeira.TabIndex = 11;
             btnLixeira.TextColor = Color.White;
             btnLixeira.UseVisualStyleBackColor = false;
-            btnLixeira.Click += btnLixeira_Click;
+            btnLixeira.Click += BtnLixeira_Click;
             // 
             // btnDuplicacao
             // 
@@ -76,7 +76,7 @@
             btnDuplicacao.TabIndex = 10;
             btnDuplicacao.TextColor = Color.White;
             btnDuplicacao.UseVisualStyleBackColor = false;
-            btnDuplicacao.Click += btnDuplicacao_Click;
+            btnDuplicacao.Click += BtnDuplicacao_Click;
             // 
             // pictureBox2
             // 

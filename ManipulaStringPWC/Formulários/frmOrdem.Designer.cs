@@ -55,7 +55,7 @@
             btnLixeira.TabIndex = 11;
             btnLixeira.TextColor = Color.White;
             btnLixeira.UseVisualStyleBackColor = false;
-            btnLixeira.Click += customButton2_Click;
+            btnLixeira.Click += BtnLixeira_Click;
             // 
             // btnOrdem
             // 
@@ -76,7 +76,7 @@
             btnOrdem.TabIndex = 10;
             btnOrdem.TextColor = Color.White;
             btnOrdem.UseVisualStyleBackColor = false;
-            btnOrdem.Click += btnOrdem_Click;
+            btnOrdem.Click += BtnOrdem_Click;
             // 
             // pictureBox2
             // 

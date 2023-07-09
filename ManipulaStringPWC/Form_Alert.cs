@@ -7,30 +7,30 @@ namespace CustomAlertBoxDemo
         {
             InitializeComponent();
         }
-        public enum enmAction
+        public enum EnmAction
         {
             wait,
             start,
             close
         }
-        public enum enmType
+        public enum EnmType
         {
             Success,
             Warning,
             Error,
             Info
         }
-        private Form_Alert.enmAction action;
+        private Form_Alert.EnmAction action;
         private int x, y;
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             switch (this.action)
             {
-                case enmAction.wait:
+                case EnmAction.wait:
                     timer1.Interval = 5000;
-                    action = enmAction.close;
+                    action = EnmAction.close;
                     break;
-                case Form_Alert.enmAction.start:
+                case Form_Alert.EnmAction.start:
                     this.timer1.Interval = 1;
                     this.Opacity += 0.1;
                     if (this.x < this.Location.X)
@@ -41,11 +41,11 @@ namespace CustomAlertBoxDemo
                     {
                         if (this.Opacity == 1.0)
                         {
-                            action = Form_Alert.enmAction.wait;
+                            action = Form_Alert.EnmAction.wait;
                         }
                     }
                     break;
-                case enmAction.close:
+                case EnmAction.close:
                     timer1.Interval = 1;
                     this.Opacity -= 0.1;
 
@@ -57,12 +57,12 @@ namespace CustomAlertBoxDemo
                     break;
             }
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
             timer1.Interval = 1;
-            action = enmAction.close;
+            action = EnmAction.close;
         }
-        public void showAlert(string msg, enmType type)
+        public void MostrarNotificacao(string msg, EnmType type)
         {
             this.Opacity = 0.0;
             this.StartPosition = FormStartPosition.Manual;
@@ -86,26 +86,26 @@ namespace CustomAlertBoxDemo
 
             switch (type)
             {
-                case enmType.Success:
+                case EnmType.Success:
                     this.pictureBox1.Image = Resources.success;
                     this.BackColor = Color.SeaGreen;
                     break;
-                case enmType.Error:
+                case EnmType.Error:
                     this.pictureBox1.Image = Resources.info;
                     this.BackColor = Color.DarkRed;
                     break;
-                case enmType.Info:
+                case EnmType.Info:
                     this.pictureBox1.Image = Resources.paperbranco;
                     this.BackColor = Color.RoyalBlue;
                     break;
-                case enmType.Warning:
+                case EnmType.Warning:
                     this.pictureBox1.Image = Resources.warning;
                     this.BackColor = Color.DarkOrange;
                     break;
             }
             this.lblMsg.Text = msg;
             this.Show();
-            this.action = enmAction.start;
+            this.action = EnmAction.start;
             this.timer1.Interval = 1;
             this.timer1.Start();
         }

@@ -91,7 +91,7 @@ namespace ManipulaStringPWC
         {
             if (sender is Button button)
             {
-                OpenChildForm(new Formulários.frmMaiuscula(), button);
+                OpenChildForm(new Formulários.FrmMaiuscula(), button);
             }
         }
 

@@ -8,16 +8,16 @@ namespace ManipulaStringPWC.Formulários
         {
             InitializeComponent();
             txtOutput.Texts = output;
-            this.Alert("Retiradas todas as duplicações!", Form_Alert.enmType.Success);
+            this.Notificacao("Retiradas todas as duplicações!", Form_Alert.EnmType.Success);
         }
-        public void Alert(string msg, Form_Alert.enmType type)
+        public void Notificacao(string msg, Form_Alert.EnmType type)
         {
             Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);
+            frm.MostrarNotificacao(msg, type);
         }
         private void modalDuplicacao_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(frmMaiuscula.parentX + 487, frmMaiuscula.parentY + 320);
+            this.Location = new Point(frmMaiusculaHelpers.parentX + 487, frmMaiusculaHelpers.parentY + 320);
         }
         private void button8_MouseLeave(object sender, EventArgs e)
         {
@@ -35,7 +35,7 @@ namespace ManipulaStringPWC.Formulários
         private void btnCopiar_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(txtOutput.Texts);
-            this.Alert("Texto copiado!", Form_Alert.enmType.Success);
+            this.Notificacao("Texto copiado!", Form_Alert.EnmType.Success);
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -43,11 +43,11 @@ namespace ManipulaStringPWC.Formulários
             {
                 txtOutput.Enabled = true;
                 txtOutput.Focus();
-                this.Alert("Disponível para alteração!", Form_Alert.enmType.Success);
+                this.Notificacao("Disponível para alteração!", Form_Alert.EnmType.Success);
             }
             else
             {
-                this.Alert("Já está disponível para edição.", Form_Alert.enmType.Info);
+                this.Notificacao("Já está disponível para edição.", Form_Alert.EnmType.Info);
             }
         }
     }

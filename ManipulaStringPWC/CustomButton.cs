@@ -92,7 +92,7 @@ namespace PortaldoPreco2.Resources
                     pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                     //Button surface
                     this.Region = new Region(pathSurface);
-                    //Draw surface border for HD result
+                    //Draw surface border for HD resultado
                     pevent.Graphics.DrawPath(penSurface, pathSurface);
                     //Button border                    
                     if (borderSize >= 1)

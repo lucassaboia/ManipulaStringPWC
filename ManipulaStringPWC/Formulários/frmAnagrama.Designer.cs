@@ -57,7 +57,7 @@
             btnLixeira.TabIndex = 16;
             btnLixeira.TextColor = Color.White;
             btnLixeira.UseVisualStyleBackColor = false;
-            btnLixeira.Click += btnLixeira_Click;
+            btnLixeira.Click += BtnLixeira_Click;
             // 
             // btnPalindromo
             // 
@@ -78,7 +78,7 @@
             btnPalindromo.TabIndex = 15;
             btnPalindromo.TextColor = Color.White;
             btnPalindromo.UseVisualStyleBackColor = false;
-            btnPalindromo.Click += btnPalindromo_Click;
+            btnPalindromo.Click += BtnPalindromo_Click;
             // 
             // pictureBox2
             // 

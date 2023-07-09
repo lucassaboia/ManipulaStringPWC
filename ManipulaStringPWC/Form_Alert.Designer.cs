@@ -60,7 +60,7 @@ namespace CustomAlertBoxDemo
             // 
             // timer1
             // 
-            timer1.Tick += timer1_Tick;
+            timer1.Tick += Timer1_Tick;
             // 
             // pictureBox2
             // 
@@ -72,7 +72,7 @@ namespace CustomAlertBoxDemo
             pictureBox2.Size = new Size(26, 30);
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
+            pictureBox2.Click += PictureBox2_Click;
             // 
             // Form_Alert
             // 

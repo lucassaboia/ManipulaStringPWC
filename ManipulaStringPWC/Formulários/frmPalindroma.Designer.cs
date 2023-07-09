@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             btnLixeira = new PortaldoPreco2.Resources.CustomButton();
-            btnPalindromaLonga = new PortaldoPreco2.Resources.CustomButton();
+            btnEncontrarPalindromaLonga = new PortaldoPreco2.Resources.CustomButton();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
             lblTitulo = new Label();
-            lblPalindromaLonga = new Label();
-            txtPalindromaLonga = new PortaldoPreco2.Customtxt();
+            lblEncontrarPalindromaLonga = new Label();
+            txtEncontrarPalindromaLonga = new PortaldoPreco2.Customtxt();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -59,28 +59,28 @@
             btnLixeira.TabIndex = 16;
             btnLixeira.TextColor = Color.White;
             btnLixeira.UseVisualStyleBackColor = false;
-            btnLixeira.Click += btnLixeira_Click;
+            btnLixeira.Click += BtnLixeira_Click;
             // 
-            // btnPalindromaLonga
+            // btnEncontrarPalindromaLonga
             // 
-            btnPalindromaLonga.BackColor = Color.CornflowerBlue;
-            btnPalindromaLonga.BackgroundColor = Color.CornflowerBlue;
-            btnPalindromaLonga.BackgroundImage = Properties.Resources.ENVIAR;
-            btnPalindromaLonga.BackgroundImageLayout = ImageLayout.Center;
-            btnPalindromaLonga.BorderColor = Color.PaleVioletRed;
-            btnPalindromaLonga.BorderRadius = 5;
-            btnPalindromaLonga.BorderSize = 0;
-            btnPalindromaLonga.FlatAppearance.BorderSize = 0;
-            btnPalindromaLonga.FlatStyle = FlatStyle.Flat;
-            btnPalindromaLonga.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            btnPalindromaLonga.ForeColor = Color.White;
-            btnPalindromaLonga.Location = new Point(44, 294);
-            btnPalindromaLonga.Name = "btnPalindromaLonga";
-            btnPalindromaLonga.Size = new Size(572, 48);
-            btnPalindromaLonga.TabIndex = 15;
-            btnPalindromaLonga.TextColor = Color.White;
-            btnPalindromaLonga.UseVisualStyleBackColor = false;
-            btnPalindromaLonga.Click += btnPalindromaLonga_Click;
+            btnEncontrarPalindromaLonga.BackColor = Color.CornflowerBlue;
+            btnEncontrarPalindromaLonga.BackgroundColor = Color.CornflowerBlue;
+            btnEncontrarPalindromaLonga.BackgroundImage = Properties.Resources.ENVIAR;
+            btnEncontrarPalindromaLonga.BackgroundImageLayout = ImageLayout.Center;
+            btnEncontrarPalindromaLonga.BorderColor = Color.PaleVioletRed;
+            btnEncontrarPalindromaLonga.BorderRadius = 5;
+            btnEncontrarPalindromaLonga.BorderSize = 0;
+            btnEncontrarPalindromaLonga.FlatAppearance.BorderSize = 0;
+            btnEncontrarPalindromaLonga.FlatStyle = FlatStyle.Flat;
+            btnEncontrarPalindromaLonga.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEncontrarPalindromaLonga.ForeColor = Color.White;
+            btnEncontrarPalindromaLonga.Location = new Point(44, 294);
+            btnEncontrarPalindromaLonga.Name = "btnEncontrarPalindromaLonga";
+            btnEncontrarPalindromaLonga.Size = new Size(572, 48);
+            btnEncontrarPalindromaLonga.TabIndex = 15;
+            btnEncontrarPalindromaLonga.TextColor = Color.White;
+            btnEncontrarPalindromaLonga.UseVisualStyleBackColor = false;
+            btnEncontrarPalindromaLonga.Click += BtnEncontrarPalindromaLonga_Click;
             // 
             // pictureBox2
             // 
@@ -102,7 +102,7 @@
             pictureBox3.Size = new Size(126, 29);
             pictureBox3.TabIndex = 17;
             pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
+            pictureBox3.Click += PictureBox3_Click;
             // 
             // pictureBox1
             // 
@@ -123,35 +123,35 @@
             lblTitulo.TabIndex = 25;
             lblTitulo.Text = "Esta é a sua palíndroma:";
             // 
-            // lblPalindromaLonga
+            // lblEncontrarPalindromaLonga
             // 
-            lblPalindromaLonga.Location = new Point(622, 133);
-            lblPalindromaLonga.Name = "lblPalindromaLonga";
-            lblPalindromaLonga.Size = new Size(170, 154);
-            lblPalindromaLonga.TabIndex = 24;
-            lblPalindromaLonga.Visible = false;
+            lblEncontrarPalindromaLonga.Location = new Point(622, 133);
+            lblEncontrarPalindromaLonga.Name = "lblEncontrarPalindromaLonga";
+            lblEncontrarPalindromaLonga.Size = new Size(170, 154);
+            lblEncontrarPalindromaLonga.TabIndex = 24;
+            lblEncontrarPalindromaLonga.Visible = false;
             // 
-            // txtPalindromaLonga
+            // txtEncontrarPalindromaLonga
             // 
-            txtPalindromaLonga.BackColor = SystemColors.Window;
-            txtPalindromaLonga.BorderColor = Color.DarkGray;
-            txtPalindromaLonga.BorderFocusColor = SystemColors.Highlight;
-            txtPalindromaLonga.BorderRadius = 8;
-            txtPalindromaLonga.BorderSize = 2;
-            txtPalindromaLonga.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPalindromaLonga.ForeColor = Color.DimGray;
-            txtPalindromaLonga.Location = new Point(44, 85);
-            txtPalindromaLonga.Margin = new Padding(4);
-            txtPalindromaLonga.Multiline = true;
-            txtPalindromaLonga.Name = "txtPalindromaLonga";
-            txtPalindromaLonga.Padding = new Padding(7);
-            txtPalindromaLonga.PasswordChar = true;
-            txtPalindromaLonga.PlaceholderColor = Color.DarkGray;
-            txtPalindromaLonga.PlaceholderText = "Insira o texto que deseja alterar aqui";
-            txtPalindromaLonga.Size = new Size(572, 202);
-            txtPalindromaLonga.TabIndex = 23;
-            txtPalindromaLonga.Texts = "";
-            txtPalindromaLonga.UnderlinedStyle = false;
+            txtEncontrarPalindromaLonga.BackColor = SystemColors.Window;
+            txtEncontrarPalindromaLonga.BorderColor = Color.DarkGray;
+            txtEncontrarPalindromaLonga.BorderFocusColor = SystemColors.Highlight;
+            txtEncontrarPalindromaLonga.BorderRadius = 8;
+            txtEncontrarPalindromaLonga.BorderSize = 2;
+            txtEncontrarPalindromaLonga.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEncontrarPalindromaLonga.ForeColor = Color.DimGray;
+            txtEncontrarPalindromaLonga.Location = new Point(44, 85);
+            txtEncontrarPalindromaLonga.Margin = new Padding(4);
+            txtEncontrarPalindromaLonga.Multiline = true;
+            txtEncontrarPalindromaLonga.Name = "txtEncontrarPalindromaLonga";
+            txtEncontrarPalindromaLonga.Padding = new Padding(7);
+            txtEncontrarPalindromaLonga.PasswordChar = true;
+            txtEncontrarPalindromaLonga.PlaceholderColor = Color.DarkGray;
+            txtEncontrarPalindromaLonga.PlaceholderText = "Insira o texto que deseja alterar aqui";
+            txtEncontrarPalindromaLonga.Size = new Size(572, 202);
+            txtEncontrarPalindromaLonga.TabIndex = 23;
+            txtEncontrarPalindromaLonga.Texts = "";
+            txtEncontrarPalindromaLonga.UnderlinedStyle = false;
             // 
             // frmPalindroma
             // 
@@ -159,12 +159,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1224, 369);
             Controls.Add(lblTitulo);
-            Controls.Add(lblPalindromaLonga);
-            Controls.Add(txtPalindromaLonga);
+            Controls.Add(lblEncontrarPalindromaLonga);
+            Controls.Add(txtEncontrarPalindromaLonga);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox3);
             Controls.Add(btnLixeira);
-            Controls.Add(btnPalindromaLonga);
+            Controls.Add(btnEncontrarPalindromaLonga);
             Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmPalindroma";
@@ -178,12 +178,12 @@
         #endregion
 
         private PortaldoPreco2.Resources.CustomButton btnLixeira;
-        private PortaldoPreco2.Resources.CustomButton btnPalindromaLonga;
+        private PortaldoPreco2.Resources.CustomButton btnEncontrarPalindromaLonga;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
         private Label lblTitulo;
-        private Label lblPalindromaLonga;
-        private PortaldoPreco2.Customtxt txtPalindromaLonga;
+        private Label lblEncontrarPalindromaLonga;
+        private PortaldoPreco2.Customtxt txtEncontrarPalindromaLonga;
     }
 }

@@ -8,7 +8,7 @@ namespace ManipulaStringPWC
 {
     public class ManipulaString
     {
-        public string InvertePalavras(string input)
+        public static string InverterPalavras(string input)
         {
             // Dividir a frase em palavras
             string[] palavras = input.Split(' ');
@@ -17,130 +17,130 @@ namespace ManipulaStringPWC
             Array.Reverse(palavras);
 
             // Juntar as palavras novamente em uma frase
-            string reversed = string.Join(" ", palavras);
+            string reverter = string.Join(" ", palavras);
 
-            return reversed;
+            return reverter;
         }
-        public string RemoverDuplicacoes(string input)
+        public static string RemoverDuplicacoes(string input)
         {
-            string result = "";
-            foreach (char c in input)
+            string resultado = "";
+            foreach (char caracter in input)
             {
-                if (result.IndexOf(c) == -1)
+                if (!resultado.Contains(caracter))
                 {
-                    result += c;
+                    resultado += caracter;
                 }
             }
 
-            return result;
+            return resultado;
         }
 
-        public string PalindromaLonga(string input)
+        public static string EncontrarPalindromaLonga(string input)
         {
             if (string.IsNullOrEmpty(input))
                 return "";
 
-            string modifiedString = IdentificaPalindroma(input);
+            string stringModificar = IdentificarPalindroma(input);
 
-            int[] palindromaLengths = new int[modifiedString.Length];
+            int[] comprimentroPalindroma = new int[stringModificar.Length];
             int center = 0;
-            int rightBoundary = 0;
+            int limiteDireito = 0;
 
-            for (int i = 1; i < modifiedString.Length - 1; i++)
+            for (int i = 1; i < stringModificar.Length - 1; i++)
             {
-                int mirror = 2 * center - i;
+                int igual = 2 * center - i;
 
-                if (i < rightBoundary)
-                    palindromaLengths[i] = Math.Min(rightBoundary - i, palindromaLengths[mirror]);
+                if (i < limiteDireito)
+                    comprimentroPalindroma[i] = Math.Min(limiteDireito - i, comprimentroPalindroma[igual]);
 
-                while (modifiedString[i + (1 + palindromaLengths[i])] == modifiedString[i - (1 + palindromaLengths[i])])
-                    palindromaLengths[i]++;
+                while (stringModificar[i + (1 + comprimentroPalindroma[i])] == stringModificar[i - (1 + comprimentroPalindroma[i])])
+                    comprimentroPalindroma[i]++;
 
-                if (i + palindromaLengths[i] > rightBoundary)
+                if (i + comprimentroPalindroma[i] > limiteDireito)
                 {
                     center = i;
-                    rightBoundary = i + palindromaLengths[i];
+                    limiteDireito = i + comprimentroPalindroma[i];
                 }
             }
 
-            int maxLength = palindromaLengths.Max();
-            int maxIndex = palindromaLengths.ToList().IndexOf(maxLength);
+            int comprimentoMaximo = comprimentroPalindroma.Max();
+            int indiceMaximo = comprimentroPalindroma.ToList().IndexOf(comprimentoMaximo);
 
-            int startIndex = (maxIndex - maxLength) / 2;
+            int comecoIndice = (indiceMaximo - comprimentoMaximo) / 2;
 
-            return input.Substring(startIndex, maxLength);
+            return input.Substring(comecoIndice, comprimentoMaximo);
         }
 
-        public string IdentificaPalindroma(string input)
+        public static string IdentificarPalindroma(string input)
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
 
             sb.Append('^');
 
-            foreach (char c in input)
+            foreach (char caracter in input)
             {
                 sb.Append('#');
-                sb.Append(c);
+                sb.Append(caracter);
             }
 
             sb.Append("#$");
 
             return sb.ToString();
         }
-        public string PrimeiraLetraMaiuscula(string input)
+        public static string TransformarPrimeiraLetraMaiuscula(string input)
         {
-            string[] sentences = input.Split(new[] { '.', '?' });
+            string[] frases = input.Split(new[] { '.', '?' });
 
-            StringBuilder resultBuilder = new StringBuilder();
+            StringBuilder construtor = new();
 
-            for (int i = 0; i < sentences.Length; i++)
+            for (int i = 0; i < frases.Length; i++)
             {
-                string sentence = sentences[i];
+                string frase = frases[i];
 
-                if (!string.IsNullOrWhiteSpace(sentence))
+                if (!string.IsNullOrWhiteSpace(frase))
                 {
-                    string trimmedSentence = sentence.Trim();
+                    string cortarFrase = frase.Trim();
 
-                    if (!string.IsNullOrEmpty(trimmedSentence))
+                    if (!string.IsNullOrEmpty(cortarFrase))
                     {
-                        char[] sentenceChars = trimmedSentence.ToCharArray();
-                        sentenceChars[0] = char.ToUpper(sentenceChars[0]);
-                        resultBuilder.Append(new string(sentenceChars));
+                        char[] caracteresFrase = cortarFrase.ToCharArray();
+                        caracteresFrase[0] = char.ToUpper(caracteresFrase[0]);
+                        construtor.Append(new string(caracteresFrase));
                     }
 
-                    if (i < sentences.Length - 1)
+                    if (i < frases.Length - 1)
                     {
-                        char delimiter = input[input.IndexOf(sentence) + sentence.Length];
-                        resultBuilder.Append(delimiter);
+                        char delimitador = input[input.IndexOf(frase) + frase.Length];
+                        construtor.Append(delimitador);
                     }
 
-                    resultBuilder.Append(" ");
+                    construtor.Append(' ');
                 }
             }
 
-            return resultBuilder.ToString().Trim();
+            return construtor.ToString().Trim();
         }
-        public static bool IsAnagramOfPalindrome(string input)
+        public static bool IdentificaAnagramaDePalindromo(string input)
         {
-            Dictionary<char, int> charCount = new Dictionary<char, int>();
+            Dictionary<char, int> contadorCaracter = new();
 
             // Conta o número de ocorrências de cada caractere
-            foreach (char c in input)
+            foreach (char caracter in input)
             {
-                if (charCount.ContainsKey(c))
+                if (contadorCaracter.ContainsKey(caracter))
                 {
-                    charCount[c]++;
+                    contadorCaracter[caracter]++;
                 }
                 else
                 {
-                    charCount[c] = 1;
+                    contadorCaracter[caracter] = 1;
                 }
             }
 
             int oddCount = 0;
 
             // Verifica se a contagem de ocorrências é válida para um anagrama de palíndromo
-            foreach (int count in charCount.Values)
+            foreach (int count in contadorCaracter.Values)
             {
                 if (count % 2 != 0)
                 {

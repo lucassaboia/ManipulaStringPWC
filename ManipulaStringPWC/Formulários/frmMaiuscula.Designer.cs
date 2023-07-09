@@ -1,6 +1,6 @@
 ﻿namespace ManipulaStringPWC.Formulários
 {
-    partial class frmMaiuscula
+    partial class FrmMaiuscula
     {
         /// <summary>
         /// Required designer variable.
@@ -55,7 +55,7 @@
             btnLixeira.TabIndex = 11;
             btnLixeira.TextColor = Color.White;
             btnLixeira.UseVisualStyleBackColor = false;
-            btnLixeira.Click += btnLixeira_Click;
+            btnLixeira.Click += BtnLixeira_Click;
             // 
             // btnMaiusculo
             // 
@@ -76,7 +76,7 @@
             btnMaiusculo.TabIndex = 10;
             btnMaiusculo.TextColor = Color.White;
             btnMaiusculo.UseVisualStyleBackColor = false;
-            btnMaiusculo.Click += btnMaiusculo_Click;
+            btnMaiusculo.Click += BtnMaiusculo_Click;
             // 
             // pictureBox2
             // 
