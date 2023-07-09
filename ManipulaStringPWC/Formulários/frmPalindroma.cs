@@ -4,7 +4,6 @@ namespace ManipulaStringPWC.Formulários
 {
     public partial class frmPalindroma : Form
     {
-        private readonly ManipulaString ManipulaString = new();
         public frmPalindroma()
         {
             InitializeComponent();

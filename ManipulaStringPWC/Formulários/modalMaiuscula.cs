@@ -3,53 +3,52 @@ namespace ManipulaStringPWC.Formulários
 {
     public partial class modalMaiuscula : Form
     {
-        private ManipulaString ManipulaString = new ManipulaString();
         public modalMaiuscula(string output)
         {
             InitializeComponent();
             txtOutput.Texts = output;
-            this.Notificacao("Texto formatado!", Form_Alert.EnmType.Success);
+            Notificacao("Texto formatado!", Form_Alert.EnmType.Success);
         }
-        public void Notificacao(string msg, Form_Alert.EnmType type)
+        public static void Notificacao(string msg, Form_Alert.EnmType type)
         {
-            Form_Alert frm = new Form_Alert();
+            Form_Alert frm = new();
             frm.MostrarNotificacao(msg, type);
         }
-        private void modalMaiuscula_Load(object sender, EventArgs e)
+        private void ModalMaiuscula_Load(object sender, EventArgs e)
         {
             this.Location = new Point(frmMaiusculaHelpers.parentX + 487, frmMaiusculaHelpers.parentY + 320);
         }
-        private void button8_MouseLeave(object sender, EventArgs e)
+        private void BtnFechar_MouseLeave(object sender, EventArgs e)
         {
-            button8.BackColor = Color.Black;
+            btnFechar.BackColor = Color.Black;
         }
 
-        private void button8_MouseEnter(object sender, EventArgs e)
+        private void BtnFechar_MouseEnter(object sender, EventArgs e)
         {
-            button8.BackColor = SystemColors.Control;
-            button8.ForeColor = SystemColors.ControlText;
+            btnFechar.BackColor = SystemColors.Control;
+            btnFechar.ForeColor = SystemColors.ControlText;
         }
-        private void button8_Click(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void btnCopiar_Click(object sender, EventArgs e)
+        private void BtnCopiar_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(txtOutput.Texts);
-            this.Notificacao("Texto copiado!", Form_Alert.EnmType.Success);
+            Notificacao("Texto copiado!", Form_Alert.EnmType.Success);
 
         }
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void BtnEditar_Click(object sender, EventArgs e)
         {
             if (!txtOutput.Enabled)
             {
                 txtOutput.Enabled = true;
                 txtOutput.Focus();
-                this.Notificacao("Disponível para alteração!", Form_Alert.EnmType.Success);
+                Notificacao("Disponível para alteração!", Form_Alert.EnmType.Success);
             }
             else
             {
-                this.Notificacao("Já está disponível para edição.", Form_Alert.EnmType.Info);
+                Notificacao("Já está disponível para edição.", Form_Alert.EnmType.Info);
             }
         }
     }

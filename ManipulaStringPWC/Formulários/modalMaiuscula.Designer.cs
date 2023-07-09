@@ -31,7 +31,7 @@
             txtOutput = new PortaldoPreco2.Customtxt();
             btnCopiar = new PortaldoPreco2.Resources.CustomButton();
             label1 = new Label();
-            button8 = new Button();
+            btnFechar = new Button();
             btnEditar = new PortaldoPreco2.Resources.CustomButton();
             SuspendLayout();
             // 
@@ -77,7 +77,7 @@
             btnCopiar.TabIndex = 19;
             btnCopiar.TextColor = Color.White;
             btnCopiar.UseVisualStyleBackColor = false;
-            btnCopiar.Click += btnCopiar_Click;
+            btnCopiar.Click += BtnCopiar_Click;
             // 
             // label1
             // 
@@ -89,22 +89,22 @@
             label1.TabIndex = 22;
             label1.Text = "Esta é a frase transformada em maiúscula";
             // 
-            // button8
+            // btnFechar
             // 
-            button8.BackColor = Color.Black;
-            button8.BackgroundImage = Properties.Resources.ei_close;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.ForeColor = Color.Black;
-            button8.Location = new Point(897, 0);
-            button8.Name = "button8";
-            button8.Size = new Size(24, 24);
-            button8.TabIndex = 23;
-            button8.UseVisualStyleBackColor = false;
-            button8.Click += button8_Click;
-            button8.MouseEnter += button8_MouseEnter;
-            button8.MouseLeave += button8_MouseLeave;
+            btnFechar.BackColor = Color.Black;
+            btnFechar.BackgroundImage = Properties.Resources.ei_close;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFechar.ForeColor = Color.Black;
+            btnFechar.Location = new Point(897, 0);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(24, 24);
+            btnFechar.TabIndex = 23;
+            btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += BtnFechar_Click;
+            btnFechar.MouseEnter += BtnFechar_MouseEnter;
+            btnFechar.MouseLeave += BtnFechar_MouseLeave;
             // 
             // btnEditar
             // 
@@ -125,7 +125,7 @@
             btnEditar.TabIndex = 24;
             btnEditar.TextColor = Color.White;
             btnEditar.UseVisualStyleBackColor = false;
-            btnEditar.Click += btnEditar_Click;
+            btnEditar.Click += BtnEditar_Click;
             // 
             // modalMaiuscula
             // 
@@ -133,14 +133,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(921, 421);
             Controls.Add(btnEditar);
-            Controls.Add(button8);
+            Controls.Add(btnFechar);
             Controls.Add(label1);
             Controls.Add(txtOutput);
             Controls.Add(btnCopiar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "modalMaiuscula";
             Text = "modalAnagrama";
-            Load += modalMaiuscula_Load;
+            Load += ModalMaiuscula_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -150,7 +150,7 @@
         private PortaldoPreco2.Customtxt txtOutput;
         private PortaldoPreco2.Resources.CustomButton btnCopiar;
         private Label label1;
-        private Button button8;
+        private Button btnFechar;
         private PortaldoPreco2.Resources.CustomButton btnEditar;
     }
 }

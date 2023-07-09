@@ -2,7 +2,6 @@ namespace ManipulaStringPWC
 {
     public partial class Form1 : Form
     {
-        private ManipulaString ManipulaString = new ManipulaString();
         private Button currentButton;
         private Form activeForm;
         public Form1()
@@ -41,10 +40,7 @@ namespace ManipulaStringPWC
         }
         private void OpenChildForm(Form childForm, Button button)
         {
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
+            activeForm?.Close();
             if (button != null)
             {
                 ClicarBotao(button);
@@ -57,21 +53,21 @@ namespace ManipulaStringPWC
             childForm.BringToFront();
             childForm.Show();
         }
-        private void btnnavHome_Click(object sender, EventArgs e)
+        private void BtnnavHome_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
                 OpenChildForm(new Formulários.frmHome(), button);
             }
         }
-        private void btnnavOrdem_Click(object sender, EventArgs e)
+        private void BtnnavOrdem_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
                 OpenChildForm(new Formulários.frmOrdem(), button);
             }
         }
-        private void btnnavDuplicacao_Click(object sender, EventArgs e)
+        private void BtnnavDuplicacao_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
@@ -79,7 +75,7 @@ namespace ManipulaStringPWC
             }
         }
 
-        private void btnnavPalindroma_Click(object sender, EventArgs e)
+        private void BtnnavPalindroma_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
@@ -87,7 +83,7 @@ namespace ManipulaStringPWC
             }
         }
 
-        private void btnnavMaiuscula_Click(object sender, EventArgs e)
+        private void BtnnavMaiuscula_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
@@ -95,18 +91,18 @@ namespace ManipulaStringPWC
             }
         }
 
-        private void btnnavAnagrama_Click(object sender, EventArgs e)
+        private void BtnnavAnagrama_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
                 OpenChildForm(new Formulários.frmAnagrama(), button);
             }
         }
-        private void button7_Click(object sender, EventArgs e)
+        private void BtnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        private void button8_Click(object sender, EventArgs e)
+        private void BtnFechar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja realmente sair?",
                       "PWC - Processo Seletivo",

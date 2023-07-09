@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label3 = new Label();
             panel1 = new Panel();
-            button8 = new Button();
-            button7 = new Button();
+            btnFechar = new Button();
+            btnMinimizar = new Button();
             panelNavbar = new Panel();
             btnnavHome = new Button();
             btnnavAnagrama = new Button();
@@ -58,43 +58,43 @@
             panel1.BackColor = Color.FromArgb(29, 29, 29);
             panel1.BackgroundImage = Properties.Resources.Header;
             panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button8);
-            panel1.Controls.Add(button7);
+            panel1.Controls.Add(btnFechar);
+            panel1.Controls.Add(btnMinimizar);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1224, 82);
             panel1.TabIndex = 22;
             // 
-            // button8
+            // btnFechar
             // 
-            button8.BackColor = Color.Transparent;
-            button8.BackgroundImage = Properties.Resources.ei_close;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.ForeColor = Color.Black;
-            button8.Location = new Point(1200, 0);
-            button8.Name = "button8";
-            button8.Size = new Size(24, 24);
-            button8.TabIndex = 10;
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
+            btnFechar.BackColor = Color.Transparent;
+            btnFechar.BackgroundImage = Properties.Resources.ei_close;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFechar.ForeColor = Color.Black;
+            btnFechar.Location = new Point(1200, 0);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(24, 24);
+            btnFechar.TabIndex = 10;
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += BtnFechar_Click;
             // 
-            // button7
+            // btnMinimizar
             // 
-            button7.BackColor = Color.Transparent;
-            button7.BackgroundImage = Properties.Resources.material_symbols_minimize;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.ForeColor = Color.FromArgb(156, 156, 156);
-            button7.Location = new Point(1170, 0);
-            button7.Name = "button7";
-            button7.Size = new Size(24, 24);
-            button7.TabIndex = 9;
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            btnMinimizar.BackColor = Color.Transparent;
+            btnMinimizar.BackgroundImage = Properties.Resources.material_symbols_minimize;
+            btnMinimizar.FlatAppearance.BorderSize = 0;
+            btnMinimizar.FlatStyle = FlatStyle.Flat;
+            btnMinimizar.Font = new Font("Segoe UI Semibold", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMinimizar.ForeColor = Color.FromArgb(156, 156, 156);
+            btnMinimizar.Location = new Point(1170, 0);
+            btnMinimizar.Name = "btnMinimizar";
+            btnMinimizar.Size = new Size(24, 24);
+            btnMinimizar.TabIndex = 9;
+            btnMinimizar.UseVisualStyleBackColor = true;
+            btnMinimizar.Click += BtnMinimizar_Click;
             // 
             // panelNavbar
             // 
@@ -126,7 +126,7 @@
             btnnavHome.TabIndex = 8;
             btnnavHome.Text = "Home";
             btnnavHome.UseVisualStyleBackColor = false;
-            btnnavHome.Click += btnnavHome_Click;
+            btnnavHome.Click += BtnnavHome_Click;
             // 
             // btnnavAnagrama
             // 
@@ -142,7 +142,7 @@
             btnnavAnagrama.TabIndex = 7;
             btnnavAnagrama.Text = "Anagrama";
             btnnavAnagrama.UseVisualStyleBackColor = true;
-            btnnavAnagrama.Click += btnnavAnagrama_Click;
+            btnnavAnagrama.Click += BtnnavAnagrama_Click;
             // 
             // btnnavMaiuscula
             // 
@@ -158,7 +158,7 @@
             btnnavMaiuscula.TabIndex = 6;
             btnnavMaiuscula.Text = "Maiúscula";
             btnnavMaiuscula.UseVisualStyleBackColor = true;
-            btnnavMaiuscula.Click += btnnavMaiuscula_Click;
+            btnnavMaiuscula.Click += BtnnavMaiuscula_Click;
             // 
             // btnnavPalindroma
             // 
@@ -174,7 +174,7 @@
             btnnavPalindroma.TabIndex = 5;
             btnnavPalindroma.Text = "Palíndroma";
             btnnavPalindroma.UseVisualStyleBackColor = true;
-            btnnavPalindroma.Click += btnnavPalindroma_Click;
+            btnnavPalindroma.Click += BtnnavPalindroma_Click;
             // 
             // btnnavDuplicacao
             // 
@@ -190,7 +190,7 @@
             btnnavDuplicacao.TabIndex = 4;
             btnnavDuplicacao.Text = "Duplicação";
             btnnavDuplicacao.UseVisualStyleBackColor = true;
-            btnnavDuplicacao.Click += btnnavDuplicacao_Click;
+            btnnavDuplicacao.Click += BtnnavDuplicacao_Click;
             // 
             // btnnavOrdem
             // 
@@ -206,7 +206,7 @@
             btnnavOrdem.TabIndex = 1;
             btnnavOrdem.Text = "Ordem";
             btnnavOrdem.UseVisualStyleBackColor = true;
-            btnnavOrdem.Click += btnnavOrdem_Click;
+            btnnavOrdem.Click += BtnnavOrdem_Click;
             // 
             // panelDesktopPane
             // 
@@ -249,8 +249,8 @@
         private Button btnnavDuplicacao;
         private Button btnnavOrdem;
         private Button btnnavHome;
-        private Button button8;
-        private Button button7;
+        private Button btnFechar;
+        private Button btnMinimizar;
         private Panel panelDesktopPane;
     }
 }
