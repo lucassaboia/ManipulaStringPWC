@@ -33,8 +33,6 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             txtMaiuscula = new PortaldoPreco2.Customtxt();
-            lblMaiusculo = new Label();
-            lblTitulo = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -122,31 +120,11 @@
             txtMaiuscula.Texts = "";
             txtMaiuscula.UnderlinedStyle = false;
             // 
-            // lblMaiusculo
-            // 
-            lblMaiusculo.Location = new Point(622, 133);
-            lblMaiusculo.Name = "lblMaiusculo";
-            lblMaiusculo.Size = new Size(170, 154);
-            lblMaiusculo.TabIndex = 21;
-            lblMaiusculo.Text = "Ordem das Palavras";
-            lblMaiusculo.Visible = false;
-            // 
-            // lblTitulo
-            // 
-            lblTitulo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(623, 85);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(170, 48);
-            lblTitulo.TabIndex = 22;
-            lblTitulo.Text = "Esta é a sua frase:";
-            // 
             // frmMaiuscula
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1224, 369);
-            Controls.Add(lblTitulo);
-            Controls.Add(lblMaiusculo);
             Controls.Add(txtMaiuscula);
             Controls.Add(btnLixeira);
             Controls.Add(btnMaiusculo);
@@ -166,8 +144,6 @@
         private PortaldoPreco2.Resources.CustomButton btnMaiusculo;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private PortaldoPreco2.Customtxt txtMaiuscula;
-        private Label lblMaiusculo;
-        private Label lblTitulo;
+        public PortaldoPreco2.Customtxt txtMaiuscula;
     }
 }

@@ -13,6 +13,7 @@ namespace ManipulaStringPWC.Formulários
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
+        public static int parentX, parentY;
         private void btnMaiusculo_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtMaiuscula.Texts.Trim()))
@@ -21,11 +22,25 @@ namespace ManipulaStringPWC.Formulários
             }
             else
             {
+                Form modalBackground = new Form();
                 string input = txtMaiuscula.Texts;
                 string output = ManipulaString.PrimeiraLetraMaiuscula(input);
-                lblMaiusculo.Text = output;
-                lblMaiusculo.Visible = true;
-                this.Alert("Texto formatado!", Form_Alert.enmType.Success);
+                using (modalMaiuscula modal = new modalMaiuscula(output))
+                {
+                    modalBackground.StartPosition = FormStartPosition.CenterScreen;
+                    modalBackground.FormBorderStyle = FormBorderStyle.None;
+                    modalBackground.Opacity = .50d;
+                    modalBackground.BackColor = Color.Black;
+                    modalBackground.Size = new Size(1222, 500);
+                    modalBackground.Location = this.Location;
+                    modalBackground.ShowInTaskbar = false;
+                    modalBackground.Show();
+                    modal.Owner = modalBackground;
+                    parentX = this.Location.X;
+                    parentY = this.Location.Y;
+                    modal.ShowDialog();
+                    modalBackground.Dispose();
+                }
             }
         }
         private void btnLixeira_Click(object sender, EventArgs e)
@@ -35,9 +50,8 @@ namespace ManipulaStringPWC.Formulários
                 this.Alert("Não há nada para ser limpo", Form_Alert.enmType.Warning);
             }
             else
-            {       
+            {
                 txtMaiuscula.Texts = "";
-                lblMaiusculo.Text = "";
                 this.Alert("Texto limpo com sucesso", Form_Alert.enmType.Success);
             }
         }

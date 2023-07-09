@@ -1,25 +1,16 @@
-using System.Reflection.Metadata.Ecma335;
-using System;
-using System.Runtime.InteropServices;
-
-
 namespace ManipulaStringPWC
 {
     public partial class Form1 : Form
     {
-        private bool isMouseDown = false;
-        private Point mouseOffset;
         private ManipulaString ManipulaString = new ManipulaString();
         private Button currentButton;
         private Form activeForm;
-
         public Form1()
         {
             InitializeComponent();
             currentButton = new Button();
             activeForm = new Form();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             OpenChildForm(new Formulários.frmHome(), btnnavHome);
@@ -54,12 +45,10 @@ namespace ManipulaStringPWC
             {
                 activeForm.Close();
             }
-
             if (button != null)
             {
                 ClicarBotao(button);
             }
-
             activeForm = childForm;
             childForm.TopLevel = false;
             panelDesktopPane.Controls.Add(childForm);
@@ -68,7 +57,6 @@ namespace ManipulaStringPWC
             childForm.BringToFront();
             childForm.Show();
         }
-
         private void btnnavHome_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
@@ -117,25 +105,6 @@ namespace ManipulaStringPWC
         private void button7_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            isMouseDown = true;
-            mouseOffset = new Point(e.X, e.Y);
-        }
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isMouseDown)
-            {
-                Point mousePos = Control.MousePosition;
-                mousePos.Offset(-mouseOffset.X, -mouseOffset.Y);
-                Location = mousePos;
-            }
-        }
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            isMouseDown = false;
         }
         private void button8_Click(object sender, EventArgs e)
         {

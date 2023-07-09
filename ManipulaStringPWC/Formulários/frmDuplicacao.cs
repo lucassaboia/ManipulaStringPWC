@@ -1,14 +1,4 @@
 ﻿using CustomAlertBoxDemo;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 namespace ManipulaStringPWC.Formulários
 {
     public partial class frmDuplicacao : Form
@@ -24,7 +14,7 @@ namespace ManipulaStringPWC.Formulários
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
-
+        public static int parentX, parentY;
         private void btnDuplicacao_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtDuplicado.Texts.Trim()))
@@ -33,14 +23,27 @@ namespace ManipulaStringPWC.Formulários
             }
             else
             {
+                Form modalBackground = new Form();
                 string input = txtDuplicado.Texts;
                 string output = ManipulaString.RemoverDuplicacoes(input);
-                lblDuplicacao.Text = output;
-                lblDuplicacao.Visible = true;
-                this.Alert("Retirado todas as duplicações!", Form_Alert.enmType.Success);
+                using (modalDuplicacao modal = new modalDuplicacao(output))
+                {
+                    modalBackground.StartPosition = FormStartPosition.CenterScreen;
+                    modalBackground.FormBorderStyle = FormBorderStyle.None;
+                    modalBackground.Opacity = .50d;
+                    modalBackground.BackColor = Color.Black;
+                    modalBackground.Size = new Size(1222, 500);
+                    modalBackground.Location = this.Location;
+                    modalBackground.ShowInTaskbar = false;
+                    modalBackground.Show();
+                    modal.Owner = modalBackground;
+                    parentX = this.Location.X;
+                    parentY = this.Location.Y;
+                    modal.ShowDialog();
+                    modalBackground.Dispose();
+                }
             }
         }
-
         private void btnLixeira_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtDuplicado.Texts.Trim()))
@@ -48,9 +51,8 @@ namespace ManipulaStringPWC.Formulários
                 this.Alert("Não há nada para ser limpo", Form_Alert.enmType.Warning);
             }
             else
-            {                
+            {
                 txtDuplicado.Texts = "";
-                lblDuplicacao.Text = "";
                 this.Alert("Texto limpo com sucesso", Form_Alert.enmType.Success);
             }
         }

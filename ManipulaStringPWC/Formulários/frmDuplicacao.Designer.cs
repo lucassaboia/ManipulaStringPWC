@@ -31,8 +31,6 @@
             btnLixeira = new PortaldoPreco2.Resources.CustomButton();
             btnDuplicacao = new PortaldoPreco2.Resources.CustomButton();
             pictureBox2 = new PictureBox();
-            lblTitulo = new Label();
-            lblDuplicacao = new Label();
             txtDuplicado = new PortaldoPreco2.Customtxt();
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -90,24 +88,6 @@
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
-            // lblTitulo
-            // 
-            lblTitulo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(622, 85);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(170, 48);
-            lblTitulo.TabIndex = 27;
-            lblTitulo.Text = "Esta é a sua frase:";
-            // 
-            // lblDuplicacao
-            // 
-            lblDuplicacao.Location = new Point(624, 133);
-            lblDuplicacao.Name = "lblDuplicacao";
-            lblDuplicacao.Size = new Size(170, 154);
-            lblDuplicacao.TabIndex = 26;
-            lblDuplicacao.Text = "Ordem das Palavras";
-            lblDuplicacao.Visible = false;
-            // 
             // txtDuplicado
             // 
             txtDuplicado.BackColor = SystemColors.Window;
@@ -146,8 +126,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1224, 369);
             Controls.Add(pictureBox1);
-            Controls.Add(lblTitulo);
-            Controls.Add(lblDuplicacao);
             Controls.Add(txtDuplicado);
             Controls.Add(btnLixeira);
             Controls.Add(btnDuplicacao);
@@ -165,8 +143,6 @@
         private PortaldoPreco2.Resources.CustomButton btnLixeira;
         private PortaldoPreco2.Resources.CustomButton btnDuplicacao;
         private PictureBox pictureBox2;
-        private Label lblTitulo;
-        private Label lblDuplicacao;
         private PortaldoPreco2.Customtxt txtDuplicado;
         private PictureBox pictureBox1;
     }

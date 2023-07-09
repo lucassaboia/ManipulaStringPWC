@@ -1,17 +1,12 @@
 ﻿using CustomAlertBoxDemo;
 namespace ManipulaStringPWC.Formulários
 {
-
     public partial class frmAnagrama : Form
     {
         private ManipulaString ManipulaString = new ManipulaString();
-
-
-
         public frmAnagrama()
         {
             InitializeComponent();
-
         }
         public void Alert(string msg, Form_Alert.enmType type)
         {

@@ -65,9 +65,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1224, 82);
             panel1.TabIndex = 22;
-            panel1.MouseDown += panel1_MouseDown;
-            panel1.MouseMove += panel1_MouseMove;
-            panel1.MouseUp += panel1_MouseUp;
             // 
             // button8
             // 

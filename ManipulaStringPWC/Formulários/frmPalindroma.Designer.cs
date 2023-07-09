@@ -117,11 +117,11 @@
             // lblTitulo
             // 
             lblTitulo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(623, 85);
+            lblTitulo.Location = new Point(616, 85);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(170, 48);
+            lblTitulo.Size = new Size(180, 48);
             lblTitulo.TabIndex = 25;
-            lblTitulo.Text = "Esta é a sua frase:";
+            lblTitulo.Text = "Esta é a sua palíndroma:";
             // 
             // lblPalindromaLonga
             // 
@@ -129,7 +129,6 @@
             lblPalindromaLonga.Name = "lblPalindromaLonga";
             lblPalindromaLonga.Size = new Size(170, 154);
             lblPalindromaLonga.TabIndex = 24;
-            lblPalindromaLonga.Text = "Ordem das Palavras";
             lblPalindromaLonga.Visible = false;
             // 
             // txtPalindromaLonga

@@ -162,17 +162,12 @@
 
         #endregion
 
-        private PortaldoPreco2.Resources.CustomButton customButton2;
-        private PortaldoPreco2.Resources.CustomButton customButton1;
-        private TextBox textBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private PortaldoPreco2.Customtxt txtMaiuscula;
         private PortaldoPreco2.Customtxt txtPalindromo;
         private PortaldoPreco2.Resources.CustomButton btnLixeira;
         private PortaldoPreco2.Resources.CustomButton btnPalindromo;
         private Label lblPalindromo;
         private Label lblTitulo;
-        private Label lblMaiusculo;
     }
 }

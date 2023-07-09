@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing;
-using System.Drawing.Drawing2D;
+﻿using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
 namespace PortaldoPreco2.Resources
@@ -67,7 +60,6 @@ namespace PortaldoPreco2.Resources
             this.Size = new Size(150, 40);
             this.BackColor = Color.MediumSlateBlue;
             this.ForeColor = Color.White;
-            this.Resize += new EventHandler(Button_Resize);
         }
 
         private GraphicsPath GetFigurePath(Rectangle rect, float radius)
@@ -128,7 +120,6 @@ namespace PortaldoPreco2.Resources
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
-            this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
         }
         private void Container_BackColorChanged(object sender, EventArgs e)
         {

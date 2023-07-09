@@ -32,8 +32,6 @@
             btnOrdem = new PortaldoPreco2.Resources.CustomButton();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            lblTitulo = new Label();
-            lblOrdem = new Label();
             txtOrdem = new PortaldoPreco2.Customtxt();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -100,24 +98,6 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
-            // lblTitulo
-            // 
-            lblTitulo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTitulo.Location = new Point(621, 85);
-            lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(170, 48);
-            lblTitulo.TabIndex = 30;
-            lblTitulo.Text = "Esta é a sua frase:";
-            // 
-            // lblOrdem
-            // 
-            lblOrdem.Location = new Point(623, 133);
-            lblOrdem.Name = "lblOrdem";
-            lblOrdem.Size = new Size(170, 154);
-            lblOrdem.TabIndex = 29;
-            lblOrdem.Text = "Ordem das Palavras";
-            lblOrdem.Visible = false;
-            // 
             // txtOrdem
             // 
             txtOrdem.BackColor = SystemColors.Window;
@@ -145,8 +125,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1224, 369);
-            Controls.Add(lblTitulo);
-            Controls.Add(lblOrdem);
             Controls.Add(txtOrdem);
             Controls.Add(btnLixeira);
             Controls.Add(btnOrdem);
@@ -166,8 +144,6 @@
         private PortaldoPreco2.Resources.CustomButton btnOrdem;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private Label lblTitulo;
-        private Label lblOrdem;
         private PortaldoPreco2.Customtxt txtOrdem;
     }
 }

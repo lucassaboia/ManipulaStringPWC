@@ -1,14 +1,4 @@
 ﻿using CustomAlertBoxDemo;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 namespace ManipulaStringPWC.Formulários
 {
     public partial class frmOrdem : Form
@@ -18,12 +8,12 @@ namespace ManipulaStringPWC.Formulários
         {
             InitializeComponent();
         }
-
         public void Alert(string msg, Form_Alert.enmType type)
         {
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
+        public static int parentX, parentY;
         private void btnOrdem_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtOrdem.Texts.Trim()))
@@ -31,15 +21,28 @@ namespace ManipulaStringPWC.Formulários
                 this.Alert("Preencha todos os campos.", Form_Alert.enmType.Info);
             }
             else
-            {  
+            {
+                Form modalBackground = new Form();
                 string input = txtOrdem.Texts;
                 string output = ManipulaString.InvertePalavras(input);
-                lblOrdem.Text = output;
-                lblOrdem.Visible = true;
-                this.Alert("Ordem invertida!", Form_Alert.enmType.Success);
+                using (modalOrdem modal = new modalOrdem(output))
+                {
+                    modalBackground.StartPosition = FormStartPosition.CenterScreen;
+                    modalBackground.FormBorderStyle = FormBorderStyle.None;
+                    modalBackground.Opacity = .50d;
+                    modalBackground.BackColor = Color.Black;
+                    modalBackground.Size = new Size(1222, 500);
+                    modalBackground.Location = this.Location;
+                    modalBackground.ShowInTaskbar = false;
+                    modalBackground.Show();
+                    modal.Owner = modalBackground;
+                    parentX = this.Location.X;
+                    parentY = this.Location.Y;
+                    modal.ShowDialog();
+                    modalBackground.Dispose();
+                }
             }
         }
-
         private void customButton2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtOrdem.Texts.Trim()))
@@ -48,10 +51,8 @@ namespace ManipulaStringPWC.Formulários
             }
             else
             {
-
                 this.Alert("Texto limpo com sucesso!", Form_Alert.enmType.Success);
                 txtOrdem.Texts = "";
-                lblOrdem.Text = "";
             }
         }
     }
