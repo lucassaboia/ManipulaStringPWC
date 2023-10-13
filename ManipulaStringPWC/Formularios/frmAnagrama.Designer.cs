@@ -1,4 +1,4 @@
-﻿namespace ManipulaStringPWC.Formulários
+﻿namespace ManipulaStringPWC.Formularios
 {
     partial class frmAnagrama
     {

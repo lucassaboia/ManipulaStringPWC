@@ -109,5 +109,10 @@ namespace CustomAlertBoxDemo
             this.timer1.Interval = 1;
             this.timer1.Start();
         }
+        public static void Notificacao(string msg, Form_Alert.EnmType type)
+        {
+            Form_Alert frm = new();
+            frm.MostrarNotificacao(msg, type);
+        }
     }
 }

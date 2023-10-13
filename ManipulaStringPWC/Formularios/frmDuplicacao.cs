@@ -1,5 +1,5 @@
 ﻿using CustomAlertBoxDemo;
-namespace ManipulaStringPWC.Formulários
+namespace ManipulaStringPWC.Formularios
 {
     public partial class frmDuplicacao : Form
     {
@@ -7,18 +7,11 @@ namespace ManipulaStringPWC.Formulários
         {
             InitializeComponent();
         }
-
-        public static void Notificacao(string msg, Form_Alert.EnmType type)
-        {
-            Form_Alert frm = new();
-            frm.MostrarNotificacao(msg, type);
-        }
-
         private void BtnDuplicacao_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtDuplicado.Texts.Trim()))
             {
-                Notificacao("Preencha todos os campos", Form_Alert.EnmType.Info);
+                Form_Alert.Notificacao("Preencha todos os campos", Form_Alert.EnmType.Info);
             }
             else
             {
@@ -45,12 +38,12 @@ namespace ManipulaStringPWC.Formulários
         {
             if (string.IsNullOrEmpty(txtDuplicado.Texts.Trim()))
             {
-                Notificacao("Não há nada para ser limpo", Form_Alert.EnmType.Warning);
+                Form_Alert.Notificacao("Não há nada para ser limpo", Form_Alert.EnmType.Warning);
             }
             else
             {
                 txtDuplicado.Texts = "";
-                Notificacao("Texto limpo com sucesso", Form_Alert.EnmType.Success);
+                Form_Alert.Notificacao("Texto limpo com sucesso", Form_Alert.EnmType.Success);
             }
         }
     }

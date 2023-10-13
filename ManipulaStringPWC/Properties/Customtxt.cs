@@ -126,6 +126,7 @@ namespace PortaldoPreco2
             {
                 if (isPlaceholder) return "";
                 else return textBox1.Text;
+
             }
             set
             {
@@ -306,6 +307,11 @@ namespace PortaldoPreco2
             if (_TextChanged != null)
                 _TextChanged.Invoke(sender, e);
         }
+        public void LimparTexto()
+        {
+            textBox1.Text = string.Empty;
+        }
+
 
         private void textBox1_Click(object sender, EventArgs e)
         {

@@ -1,5 +1,5 @@
 ﻿using CustomAlertBoxDemo;
-namespace ManipulaStringPWC.Formulários
+namespace ManipulaStringPWC.Formularios
 {
     public partial class modalMaiuscula : Form
     {
@@ -7,12 +7,7 @@ namespace ManipulaStringPWC.Formulários
         {
             InitializeComponent();
             txtOutput.Texts = output;
-            Notificacao("Texto formatado!", Form_Alert.EnmType.Success);
-        }
-        public static void Notificacao(string msg, Form_Alert.EnmType type)
-        {
-            Form_Alert frm = new();
-            frm.MostrarNotificacao(msg, type);
+            Form_Alert.Notificacao("Texto formatado!", Form_Alert.EnmType.Success);
         }
         private void ModalMaiuscula_Load(object sender, EventArgs e)
         {
@@ -35,7 +30,7 @@ namespace ManipulaStringPWC.Formulários
         private void BtnCopiar_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(txtOutput.Texts);
-            Notificacao("Texto copiado!", Form_Alert.EnmType.Success);
+            Form_Alert.Notificacao("Texto copiado!", Form_Alert.EnmType.Success);
 
         }
         private void BtnEditar_Click(object sender, EventArgs e)
@@ -44,11 +39,11 @@ namespace ManipulaStringPWC.Formulários
             {
                 txtOutput.Enabled = true;
                 txtOutput.Focus();
-                Notificacao("Disponível para alteração!", Form_Alert.EnmType.Success);
+                Form_Alert.Notificacao("Disponível para alteração!", Form_Alert.EnmType.Success);
             }
             else
             {
-                Notificacao("Já está disponível para edição.", Form_Alert.EnmType.Info);
+                Form_Alert.Notificacao("Já está disponível para edição.", Form_Alert.EnmType.Info);
             }
         }
     }

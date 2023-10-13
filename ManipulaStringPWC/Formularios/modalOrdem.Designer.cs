@@ -1,6 +1,6 @@
-﻿namespace ManipulaStringPWC.Formulários
+﻿namespace ManipulaStringPWC.Formularios
 {
-    partial class modalDuplicacao
+    partial class modalOrdem
     {
         /// <summary>
         /// Required designer variable.
@@ -86,7 +86,7 @@
             label1.Name = "label1";
             label1.Size = new Size(821, 37);
             label1.TabIndex = 22;
-            label1.Text = "Esta é a frase escrita sem letras duplicadas";
+            label1.Text = "Esta é a frase escrita de forma invertida";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button8
@@ -127,7 +127,7 @@
             btnEditar.UseVisualStyleBackColor = false;
             btnEditar.Click += btnEditar_Click;
             // 
-            // modalDuplicacao
+            // modalOrdem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -138,9 +138,9 @@
             Controls.Add(txtOutput);
             Controls.Add(btnCopiar);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "modalDuplicacao";
+            Name = "modalOrdem";
             Text = "modalAnagrama";
-            Load += modalDuplicacao_Load;
+            Load += modalOrdem_Load;
             ResumeLayout(false);
         }
 

@@ -1,6 +1,6 @@
-﻿namespace ManipulaStringPWC.Formulários
+﻿namespace ManipulaStringPWC.Formularios
 {
-    partial class FrmMaiuscula
+    partial class frmDuplicacao
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             btnLixeira = new PortaldoPreco2.Resources.CustomButton();
-            btnMaiusculo = new PortaldoPreco2.Resources.CustomButton();
+            btnDuplicacao = new PortaldoPreco2.Resources.CustomButton();
             pictureBox2 = new PictureBox();
+            txtDuplicado = new PortaldoPreco2.Customtxt();
             pictureBox1 = new PictureBox();
-            txtMaiuscula = new PortaldoPreco2.Customtxt();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -57,82 +57,82 @@
             btnLixeira.UseVisualStyleBackColor = false;
             btnLixeira.Click += BtnLixeira_Click;
             // 
-            // btnMaiusculo
+            // btnDuplicacao
             // 
-            btnMaiusculo.BackColor = Color.CornflowerBlue;
-            btnMaiusculo.BackgroundColor = Color.CornflowerBlue;
-            btnMaiusculo.BackgroundImage = Properties.Resources.ENVIAR;
-            btnMaiusculo.BackgroundImageLayout = ImageLayout.Center;
-            btnMaiusculo.BorderColor = Color.PaleVioletRed;
-            btnMaiusculo.BorderRadius = 5;
-            btnMaiusculo.BorderSize = 0;
-            btnMaiusculo.FlatAppearance.BorderSize = 0;
-            btnMaiusculo.FlatStyle = FlatStyle.Flat;
-            btnMaiusculo.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            btnMaiusculo.ForeColor = Color.White;
-            btnMaiusculo.Location = new Point(44, 294);
-            btnMaiusculo.Name = "btnMaiusculo";
-            btnMaiusculo.Size = new Size(572, 48);
-            btnMaiusculo.TabIndex = 10;
-            btnMaiusculo.TextColor = Color.White;
-            btnMaiusculo.UseVisualStyleBackColor = false;
-            btnMaiusculo.Click += BtnMaiusculo_Click;
+            btnDuplicacao.BackColor = Color.CornflowerBlue;
+            btnDuplicacao.BackgroundColor = Color.CornflowerBlue;
+            btnDuplicacao.BackgroundImage = Properties.Resources.ENVIAR;
+            btnDuplicacao.BackgroundImageLayout = ImageLayout.Center;
+            btnDuplicacao.BorderColor = Color.PaleVioletRed;
+            btnDuplicacao.BorderRadius = 5;
+            btnDuplicacao.BorderSize = 0;
+            btnDuplicacao.FlatAppearance.BorderSize = 0;
+            btnDuplicacao.FlatStyle = FlatStyle.Flat;
+            btnDuplicacao.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDuplicacao.ForeColor = Color.White;
+            btnDuplicacao.Location = new Point(44, 294);
+            btnDuplicacao.Name = "btnDuplicacao";
+            btnDuplicacao.Size = new Size(572, 48);
+            btnDuplicacao.TabIndex = 10;
+            btnDuplicacao.TextColor = Color.White;
+            btnDuplicacao.UseVisualStyleBackColor = false;
+            btnDuplicacao.Click += BtnDuplicacao_Click;
             // 
             // pictureBox2
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.tituloMaiúscula;
+            pictureBox2.BackgroundImage = Properties.Resources.tituloDuplicacao;
             pictureBox2.BackgroundImageLayout = ImageLayout.None;
             pictureBox2.Location = new Point(44, 25);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(628, 53);
+            pictureBox2.Size = new Size(573, 53);
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
+            // txtDuplicado
+            // 
+            txtDuplicado.BackColor = SystemColors.Window;
+            txtDuplicado.BorderColor = Color.DarkGray;
+            txtDuplicado.BorderFocusColor = SystemColors.Highlight;
+            txtDuplicado.BorderRadius = 8;
+            txtDuplicado.BorderSize = 2;
+            txtDuplicado.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDuplicado.ForeColor = Color.DimGray;
+            txtDuplicado.Location = new Point(45, 85);
+            txtDuplicado.Margin = new Padding(4);
+            txtDuplicado.Multiline = true;
+            txtDuplicado.Name = "txtDuplicado";
+            txtDuplicado.Padding = new Padding(7);
+            txtDuplicado.PasswordChar = true;
+            txtDuplicado.PlaceholderColor = Color.DarkGray;
+            txtDuplicado.PlaceholderText = "Insira o texto que deseja alterar aqui";
+            txtDuplicado.Size = new Size(572, 202);
+            txtDuplicado.TabIndex = 25;
+            txtDuplicado.Texts = "";
+            txtDuplicado.UnderlinedStyle = false;
+            // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.funcionalidadesMaiúscula;
+            pictureBox1.BackgroundImage = Properties.Resources.funcionalidadesDuplicacao;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Location = new Point(798, 24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(383, 318);
-            pictureBox1.TabIndex = 7;
+            pictureBox1.TabIndex = 28;
             pictureBox1.TabStop = false;
             // 
-            // txtMaiuscula
-            // 
-            txtMaiuscula.BackColor = SystemColors.Window;
-            txtMaiuscula.BorderColor = Color.DarkGray;
-            txtMaiuscula.BorderFocusColor = SystemColors.Highlight;
-            txtMaiuscula.BorderRadius = 8;
-            txtMaiuscula.BorderSize = 2;
-            txtMaiuscula.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMaiuscula.ForeColor = Color.DimGray;
-            txtMaiuscula.Location = new Point(44, 85);
-            txtMaiuscula.Margin = new Padding(4);
-            txtMaiuscula.Multiline = true;
-            txtMaiuscula.Name = "txtMaiuscula";
-            txtMaiuscula.Padding = new Padding(7);
-            txtMaiuscula.PasswordChar = true;
-            txtMaiuscula.PlaceholderColor = Color.DarkGray;
-            txtMaiuscula.PlaceholderText = "Insira o texto que deseja alterar aqui";
-            txtMaiuscula.Size = new Size(572, 202);
-            txtMaiuscula.TabIndex = 12;
-            txtMaiuscula.Texts = "";
-            txtMaiuscula.UnderlinedStyle = false;
-            // 
-            // frmMaiuscula
+            // frmDuplicacao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1224, 369);
-            Controls.Add(txtMaiuscula);
-            Controls.Add(btnLixeira);
-            Controls.Add(btnMaiusculo);
-            Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
+            Controls.Add(txtDuplicado);
+            Controls.Add(btnLixeira);
+            Controls.Add(btnDuplicacao);
+            Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmMaiuscula";
-            Text = "frmMaiuscula";
+            Name = "frmDuplicacao";
+            Text = "frmDuplicacao";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -141,9 +141,9 @@
         #endregion
 
         private PortaldoPreco2.Resources.CustomButton btnLixeira;
-        private PortaldoPreco2.Resources.CustomButton btnMaiusculo;
+        private PortaldoPreco2.Resources.CustomButton btnDuplicacao;
         private PictureBox pictureBox2;
+        private PortaldoPreco2.Customtxt txtDuplicado;
         private PictureBox pictureBox1;
-        public PortaldoPreco2.Customtxt txtMaiuscula;
     }
 }

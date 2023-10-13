@@ -1,19 +1,13 @@
 ﻿using CustomAlertBoxDemo;
-namespace ManipulaStringPWC.Formulários
+namespace ManipulaStringPWC.Formularios
 {
     public partial class modalDuplicacao : Form
     {
-        private ManipulaString ManipulaString = new ManipulaString();
         public modalDuplicacao(string output)
         {
             InitializeComponent();
             txtOutput.Texts = output;
-            this.Notificacao("Retiradas todas as duplicações!", Form_Alert.EnmType.Success);
-        }
-        public void Notificacao(string msg, Form_Alert.EnmType type)
-        {
-            Form_Alert frm = new Form_Alert();
-            frm.MostrarNotificacao(msg, type);
+            Form_Alert.Notificacao("Retiradas todas as duplicações!", Form_Alert.EnmType.Success);
         }
         private void modalDuplicacao_Load(object sender, EventArgs e)
         {
@@ -35,7 +29,7 @@ namespace ManipulaStringPWC.Formulários
         private void btnCopiar_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(txtOutput.Texts);
-            this.Notificacao("Texto copiado!", Form_Alert.EnmType.Success);
+            Form_Alert.Notificacao("Texto copiado!", Form_Alert.EnmType.Success);
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -43,11 +37,11 @@ namespace ManipulaStringPWC.Formulários
             {
                 txtOutput.Enabled = true;
                 txtOutput.Focus();
-                this.Notificacao("Disponível para alteração!", Form_Alert.EnmType.Success);
+                Form_Alert.Notificacao("Disponível para alteração!", Form_Alert.EnmType.Success);
             }
             else
             {
-                this.Notificacao("Já está disponível para edição.", Form_Alert.EnmType.Info);
+                Form_Alert.Notificacao("Já está disponível para edição.", Form_Alert.EnmType.Info);
             }
         }
     }

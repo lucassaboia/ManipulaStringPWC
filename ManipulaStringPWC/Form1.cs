@@ -12,7 +12,7 @@ namespace ManipulaStringPWC
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new Formulários.frmHome(), btnnavHome);
+            OpenChildForm(new Formularios.frmHome(), btnnavHome);
         }
         private void ClicarBotao(Button button)
         {
@@ -57,21 +57,21 @@ namespace ManipulaStringPWC
         {
             if (sender is Button button)
             {
-                OpenChildForm(new Formulários.frmHome(), button);
+                OpenChildForm(new Formularios.frmHome(), button);
             }
         }
         private void BtnnavOrdem_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
-                OpenChildForm(new Formulários.frmOrdem(), button);
+                OpenChildForm(new Formularios.frmOrdem(), button);
             }
         }
         private void BtnnavDuplicacao_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
-                OpenChildForm(new Formulários.frmDuplicacao(), button);
+                OpenChildForm(new Formularios.frmDuplicacao(), button);
             }
         }
 
@@ -79,7 +79,7 @@ namespace ManipulaStringPWC
         {
             if (sender is Button button)
             {
-                OpenChildForm(new Formulários.frmPalindroma(), button);
+                OpenChildForm(new Formularios.frmPalindroma(), button);
             }
         }
 
@@ -87,15 +87,14 @@ namespace ManipulaStringPWC
         {
             if (sender is Button button)
             {
-                OpenChildForm(new Formulários.FrmMaiuscula(), button);
+                OpenChildForm(new Formularios.FrmMaiuscula(), button);
             }
         }
-
         private void BtnnavAnagrama_Click(object sender, EventArgs e)
         {
             if (sender is Button button)
             {
-                OpenChildForm(new Formulários.frmAnagrama(), button);
+                OpenChildForm(new Formularios.frmAnagrama(), button);
             }
         }
         private void BtnMinimizar_Click(object sender, EventArgs e)

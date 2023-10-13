@@ -1,4 +1,4 @@
-﻿namespace ManipulaStringPWC.Formulários
+﻿namespace ManipulaStringPWC.Formularios
 {
     public partial class frmHome : Form
     {

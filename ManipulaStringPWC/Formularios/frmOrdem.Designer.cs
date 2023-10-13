@@ -1,6 +1,6 @@
-﻿namespace ManipulaStringPWC.Formulários
+﻿namespace ManipulaStringPWC.Formularios
 {
-    partial class frmDuplicacao
+    partial class frmOrdem
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             btnLixeira = new PortaldoPreco2.Resources.CustomButton();
-            btnDuplicacao = new PortaldoPreco2.Resources.CustomButton();
+            btnOrdem = new PortaldoPreco2.Resources.CustomButton();
             pictureBox2 = new PictureBox();
-            txtDuplicado = new PortaldoPreco2.Customtxt();
             pictureBox1 = new PictureBox();
+            txtOrdem = new PortaldoPreco2.Customtxt();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -57,30 +57,30 @@
             btnLixeira.UseVisualStyleBackColor = false;
             btnLixeira.Click += BtnLixeira_Click;
             // 
-            // btnDuplicacao
+            // btnOrdem
             // 
-            btnDuplicacao.BackColor = Color.CornflowerBlue;
-            btnDuplicacao.BackgroundColor = Color.CornflowerBlue;
-            btnDuplicacao.BackgroundImage = Properties.Resources.ENVIAR;
-            btnDuplicacao.BackgroundImageLayout = ImageLayout.Center;
-            btnDuplicacao.BorderColor = Color.PaleVioletRed;
-            btnDuplicacao.BorderRadius = 5;
-            btnDuplicacao.BorderSize = 0;
-            btnDuplicacao.FlatAppearance.BorderSize = 0;
-            btnDuplicacao.FlatStyle = FlatStyle.Flat;
-            btnDuplicacao.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDuplicacao.ForeColor = Color.White;
-            btnDuplicacao.Location = new Point(44, 294);
-            btnDuplicacao.Name = "btnDuplicacao";
-            btnDuplicacao.Size = new Size(572, 48);
-            btnDuplicacao.TabIndex = 10;
-            btnDuplicacao.TextColor = Color.White;
-            btnDuplicacao.UseVisualStyleBackColor = false;
-            btnDuplicacao.Click += BtnDuplicacao_Click;
+            btnOrdem.BackColor = Color.CornflowerBlue;
+            btnOrdem.BackgroundColor = Color.CornflowerBlue;
+            btnOrdem.BackgroundImage = Properties.Resources.ENVIAR;
+            btnOrdem.BackgroundImageLayout = ImageLayout.Center;
+            btnOrdem.BorderColor = Color.PaleVioletRed;
+            btnOrdem.BorderRadius = 5;
+            btnOrdem.BorderSize = 0;
+            btnOrdem.FlatAppearance.BorderSize = 0;
+            btnOrdem.FlatStyle = FlatStyle.Flat;
+            btnOrdem.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            btnOrdem.ForeColor = Color.White;
+            btnOrdem.Location = new Point(44, 294);
+            btnOrdem.Name = "btnOrdem";
+            btnOrdem.Size = new Size(572, 48);
+            btnOrdem.TabIndex = 10;
+            btnOrdem.TextColor = Color.White;
+            btnOrdem.UseVisualStyleBackColor = false;
+            btnOrdem.Click += BtnOrdem_Click;
             // 
             // pictureBox2
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.tituloDuplicacao;
+            pictureBox2.BackgroundImage = Properties.Resources.tituloOrdem;
             pictureBox2.BackgroundImageLayout = ImageLayout.None;
             pictureBox2.Location = new Point(44, 25);
             pictureBox2.Name = "pictureBox2";
@@ -88,51 +88,51 @@
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
-            // txtDuplicado
-            // 
-            txtDuplicado.BackColor = SystemColors.Window;
-            txtDuplicado.BorderColor = Color.DarkGray;
-            txtDuplicado.BorderFocusColor = SystemColors.Highlight;
-            txtDuplicado.BorderRadius = 8;
-            txtDuplicado.BorderSize = 2;
-            txtDuplicado.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtDuplicado.ForeColor = Color.DimGray;
-            txtDuplicado.Location = new Point(45, 85);
-            txtDuplicado.Margin = new Padding(4);
-            txtDuplicado.Multiline = true;
-            txtDuplicado.Name = "txtDuplicado";
-            txtDuplicado.Padding = new Padding(7);
-            txtDuplicado.PasswordChar = true;
-            txtDuplicado.PlaceholderColor = Color.DarkGray;
-            txtDuplicado.PlaceholderText = "Insira o texto que deseja alterar aqui";
-            txtDuplicado.Size = new Size(572, 202);
-            txtDuplicado.TabIndex = 25;
-            txtDuplicado.Texts = "";
-            txtDuplicado.UnderlinedStyle = false;
-            // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.funcionalidadesDuplicacao;
+            pictureBox1.BackgroundImage = Properties.Resources.funcionalidadesOrdem;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Location = new Point(798, 24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(383, 318);
-            pictureBox1.TabIndex = 28;
+            pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
-            // frmDuplicacao
+            // txtOrdem
+            // 
+            txtOrdem.BackColor = SystemColors.Window;
+            txtOrdem.BorderColor = Color.DarkGray;
+            txtOrdem.BorderFocusColor = SystemColors.Highlight;
+            txtOrdem.BorderRadius = 8;
+            txtOrdem.BorderSize = 2;
+            txtOrdem.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtOrdem.ForeColor = Color.DimGray;
+            txtOrdem.Location = new Point(44, 85);
+            txtOrdem.Margin = new Padding(4);
+            txtOrdem.Multiline = true;
+            txtOrdem.Name = "txtOrdem";
+            txtOrdem.Padding = new Padding(7);
+            txtOrdem.PasswordChar = true;
+            txtOrdem.PlaceholderColor = Color.DarkGray;
+            txtOrdem.PlaceholderText = "Insira o texto que deseja alterar aqui";
+            txtOrdem.Size = new Size(572, 202);
+            txtOrdem.TabIndex = 28;
+            txtOrdem.Texts = "";
+            txtOrdem.UnderlinedStyle = false;
+            // 
+            // frmOrdem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1224, 369);
-            Controls.Add(pictureBox1);
-            Controls.Add(txtDuplicado);
+            Controls.Add(txtOrdem);
             Controls.Add(btnLixeira);
-            Controls.Add(btnDuplicacao);
+            Controls.Add(btnOrdem);
             Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmDuplicacao";
-            Text = "frmDuplicacao";
+            Name = "frmOrdem";
+            Text = "frmOrdem";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -141,9 +141,9 @@
         #endregion
 
         private PortaldoPreco2.Resources.CustomButton btnLixeira;
-        private PortaldoPreco2.Resources.CustomButton btnDuplicacao;
+        private PortaldoPreco2.Resources.CustomButton btnOrdem;
         private PictureBox pictureBox2;
-        private PortaldoPreco2.Customtxt txtDuplicado;
         private PictureBox pictureBox1;
+        private PortaldoPreco2.Customtxt txtOrdem;
     }
 }

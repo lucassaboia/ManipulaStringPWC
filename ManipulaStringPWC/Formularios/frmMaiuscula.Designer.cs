@@ -1,6 +1,6 @@
-﻿namespace ManipulaStringPWC.Formulários
+﻿namespace ManipulaStringPWC.Formularios
 {
-    partial class frmOrdem
+    partial class FrmMaiuscula
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             btnLixeira = new PortaldoPreco2.Resources.CustomButton();
-            btnOrdem = new PortaldoPreco2.Resources.CustomButton();
+            btnMaiusculo = new PortaldoPreco2.Resources.CustomButton();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            txtOrdem = new PortaldoPreco2.Customtxt();
+            txtMaiuscula = new PortaldoPreco2.Customtxt();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -57,40 +57,40 @@
             btnLixeira.UseVisualStyleBackColor = false;
             btnLixeira.Click += BtnLixeira_Click;
             // 
-            // btnOrdem
+            // btnMaiusculo
             // 
-            btnOrdem.BackColor = Color.CornflowerBlue;
-            btnOrdem.BackgroundColor = Color.CornflowerBlue;
-            btnOrdem.BackgroundImage = Properties.Resources.ENVIAR;
-            btnOrdem.BackgroundImageLayout = ImageLayout.Center;
-            btnOrdem.BorderColor = Color.PaleVioletRed;
-            btnOrdem.BorderRadius = 5;
-            btnOrdem.BorderSize = 0;
-            btnOrdem.FlatAppearance.BorderSize = 0;
-            btnOrdem.FlatStyle = FlatStyle.Flat;
-            btnOrdem.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            btnOrdem.ForeColor = Color.White;
-            btnOrdem.Location = new Point(44, 294);
-            btnOrdem.Name = "btnOrdem";
-            btnOrdem.Size = new Size(572, 48);
-            btnOrdem.TabIndex = 10;
-            btnOrdem.TextColor = Color.White;
-            btnOrdem.UseVisualStyleBackColor = false;
-            btnOrdem.Click += BtnOrdem_Click;
+            btnMaiusculo.BackColor = Color.CornflowerBlue;
+            btnMaiusculo.BackgroundColor = Color.CornflowerBlue;
+            btnMaiusculo.BackgroundImage = Properties.Resources.ENVIAR;
+            btnMaiusculo.BackgroundImageLayout = ImageLayout.Center;
+            btnMaiusculo.BorderColor = Color.PaleVioletRed;
+            btnMaiusculo.BorderRadius = 5;
+            btnMaiusculo.BorderSize = 0;
+            btnMaiusculo.FlatAppearance.BorderSize = 0;
+            btnMaiusculo.FlatStyle = FlatStyle.Flat;
+            btnMaiusculo.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMaiusculo.ForeColor = Color.White;
+            btnMaiusculo.Location = new Point(44, 294);
+            btnMaiusculo.Name = "btnMaiusculo";
+            btnMaiusculo.Size = new Size(572, 48);
+            btnMaiusculo.TabIndex = 10;
+            btnMaiusculo.TextColor = Color.White;
+            btnMaiusculo.UseVisualStyleBackColor = false;
+            btnMaiusculo.Click += BtnMaiusculo_Click;
             // 
             // pictureBox2
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.tituloOrdem;
+            pictureBox2.BackgroundImage = Properties.Resources.tituloMaiúscula;
             pictureBox2.BackgroundImageLayout = ImageLayout.None;
             pictureBox2.Location = new Point(44, 25);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(573, 53);
+            pictureBox2.Size = new Size(628, 53);
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.funcionalidadesOrdem;
+            pictureBox1.BackgroundImage = Properties.Resources.funcionalidadesMaiúscula;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Location = new Point(798, 24);
             pictureBox1.Name = "pictureBox1";
@@ -98,41 +98,41 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
-            // txtOrdem
+            // txtMaiuscula
             // 
-            txtOrdem.BackColor = SystemColors.Window;
-            txtOrdem.BorderColor = Color.DarkGray;
-            txtOrdem.BorderFocusColor = SystemColors.Highlight;
-            txtOrdem.BorderRadius = 8;
-            txtOrdem.BorderSize = 2;
-            txtOrdem.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtOrdem.ForeColor = Color.DimGray;
-            txtOrdem.Location = new Point(44, 85);
-            txtOrdem.Margin = new Padding(4);
-            txtOrdem.Multiline = true;
-            txtOrdem.Name = "txtOrdem";
-            txtOrdem.Padding = new Padding(7);
-            txtOrdem.PasswordChar = true;
-            txtOrdem.PlaceholderColor = Color.DarkGray;
-            txtOrdem.PlaceholderText = "Insira o texto que deseja alterar aqui";
-            txtOrdem.Size = new Size(572, 202);
-            txtOrdem.TabIndex = 28;
-            txtOrdem.Texts = "";
-            txtOrdem.UnderlinedStyle = false;
+            txtMaiuscula.BackColor = SystemColors.Window;
+            txtMaiuscula.BorderColor = Color.DarkGray;
+            txtMaiuscula.BorderFocusColor = SystemColors.Highlight;
+            txtMaiuscula.BorderRadius = 8;
+            txtMaiuscula.BorderSize = 2;
+            txtMaiuscula.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMaiuscula.ForeColor = Color.DimGray;
+            txtMaiuscula.Location = new Point(44, 85);
+            txtMaiuscula.Margin = new Padding(4);
+            txtMaiuscula.Multiline = true;
+            txtMaiuscula.Name = "txtMaiuscula";
+            txtMaiuscula.Padding = new Padding(7);
+            txtMaiuscula.PasswordChar = true;
+            txtMaiuscula.PlaceholderColor = Color.DarkGray;
+            txtMaiuscula.PlaceholderText = "Insira o texto que deseja alterar aqui";
+            txtMaiuscula.Size = new Size(572, 202);
+            txtMaiuscula.TabIndex = 12;
+            txtMaiuscula.Texts = "";
+            txtMaiuscula.UnderlinedStyle = false;
             // 
-            // frmOrdem
+            // frmMaiuscula
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1224, 369);
-            Controls.Add(txtOrdem);
+            Controls.Add(txtMaiuscula);
             Controls.Add(btnLixeira);
-            Controls.Add(btnOrdem);
+            Controls.Add(btnMaiusculo);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmOrdem";
-            Text = "frmOrdem";
+            Name = "frmMaiuscula";
+            Text = "frmMaiuscula";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -141,9 +141,9 @@
         #endregion
 
         private PortaldoPreco2.Resources.CustomButton btnLixeira;
-        private PortaldoPreco2.Resources.CustomButton btnOrdem;
+        private PortaldoPreco2.Resources.CustomButton btnMaiusculo;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private PortaldoPreco2.Customtxt txtOrdem;
+        public PortaldoPreco2.Customtxt txtMaiuscula;
     }
 }

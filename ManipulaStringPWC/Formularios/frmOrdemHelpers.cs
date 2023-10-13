@@ -1,7 +1,7 @@
 ﻿using CustomAlertBoxDemo;
-using ManipulaStringPWC.Formulários;
+using ManipulaStringPWC.Formularios;
 internal static class frmOrdemHelpers
 {
     public static int parentY;
-        public static int parentX;
+    public static int parentX;
 }
