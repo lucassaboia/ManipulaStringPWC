@@ -21,3 +21,4 @@ A aplicação oferece uma interface intuitiva para navegar pelos desafios e test
 | **Ordem** | Ordena os caracteres ou as palavras da string. |
 | **Outras** | Reversão de palavras e outras manipulações de texto. |
 
+O projeto pode ser inicializado em ManipulaStringPWC\bin\Debug\net6.0-windows\ManipulaStringPWC.exe
