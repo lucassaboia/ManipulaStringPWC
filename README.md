@@ -1,12 +1,11 @@
-# 💻 Manipulação de Strings
+# 💻 Manipulação de Textos
 
 Este projeto é uma aplicação desktop desenvolvida que demonstra a manipulação eficiente de strings e a implementação de lógica de programação através de diversas funcionalidades.
 
 O projeto foi criado como um **desafio**, destacando a capacidade de desenvolvimento (back-end e/ou front-end) e o interesse em soluções intuitivas e agradáveis.
 
 ---
-
-<img width="1226" height="508" alt="image" src="https://github.com/user-attachments/assets/059b295a-1cee-41ba-8c97-ecbd0fbf56dc" />
+<img width="1200" height="549" alt="Home" src="https://github.com/user-attachments/assets/355ce641-8436-41ef-bf5c-5cb38ae7fe74" />
 
 ## ✨ Funcionalidades
 
